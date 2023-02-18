@@ -1,37 +1,55 @@
-# HTR on museum's biological artifacts labels
+# HTR on biological artifacts labels
 
-This repository will have a bunch of information for know.
+### Most Relevant material to read
+
+#### [`Comprensive Blog good started`](https://nanonets.com/blog/handwritten-character-recognition/)
+
+- [Convolve Attend and Spell paper](https://priba.github.io/assets/publi/conf/2018_GCPR_LKang.pdf)
+
+- [Pay Attention to What You Read paper](https://arxiv.org/abs/2005.13044)
+
+- [Comparison of Open-Source Libraries paper](https://teklia.com/publications/DAS2022_HUMU.pdf)
+
+- [HTR-Flor paper](https://ieeexplore.ieee.org/document/9266005)
+
+- [Handwriting Recognition of Historical Documents with few labeled dat](https://arxiv.org/pdf/1811.07768v1.pdf)
+    > READ dataset ofline HTR
+
+    > [code](https://github.com/0x454447415244/HandwritingRecognitionSystem)
+
+- Potentially ScrabbleGAN to have more data
+
+- Connectionist Temporal Classification (CTC)
+    > CTC is a type of neural network architecture that can be used to learn mappings between input (images for example) sequences and output sequences (labels). In speech recognition, for example, the input sequence is an audio signal, and the output sequence is a sequence of words that the speaker is saying.
+
+    > Beam search decoding
 
 #### TODO:
 > Ask chatGPT to write a better paper for you
 
 - [ ] Format the repository
-- [ ] Read the previous paper
+- [ ] Take a look at Attention is all you need again
 - [ ] Take inspiration from [this](https://github.com/AlbertoPresta/Thesis)
 - [ ] ViT pytorch implementation [hear](https://github.com/lucidrains/vit-pytorch)
-- [ ] Read [this](https://nanonets.com/blog/handwritten-character-recognition/) article for information
+- [ ] Read [this](https://nanonets.com/blog/handwritten-character-recognition/) article for information, interesting part start from `Scan, Attend and Read`
 - [ ] Read [this](https://paperswithcode.com/task/handwriting-recognition) paper
+- [ ] [`The Illustrated Transformer`](https://jalammar.github.io/illustrated-transformer/)
 
-#### Keywords:
+- [ ] [`Seq2seq with attention`](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
 
-- HTR
-- Neural Netowrk
-- Machine Learning
-- Classification
+- [X] Read the paper they gave me on CV (Computer Vision)
 
 #### Possible things to do
 
-- Transfer learning from previous work
+- Transfer-learning from previous work
 - Look at the [visual transformer](https://www.youtube.com/watch?v=TrdevFK_am4)
-- Take a look at Attention is all you need again
 - Distillation in ViTs [hear](https://arxiv.org/abs/2012.12877) but not really that interested for know
-- Paper summary on visual transformer https://arxiv.org/abs/2012.12556
+- [Paper summary on visual transformer](https://arxiv.org/abs/2012.12556)
 
-- Small ViT (https://arxiv.org/abs/2106.10270)
+- [Small ViT](https://arxiv.org/abs/2106.10270)
 
-#### Important links
+#### Important link
 
-The best thing to do is probably just testing out different models (for example have a look at the work done e.g. [here](https://link.springer.com/chapter/10.1007/978-3-031-06555-2_27).
 Also keep in mind that combining multiple predictors can be a very powerful technique as well [see](https://dl.gi.de/handle/20.500.12116/16993)
 
 ### Response:
@@ -52,3 +70,11 @@ If you have a rough idea about what is in your dataset, you can also use that to
 ### Things I have to do
 
 _To improve the performance of your model, you can also consider data augmentation techniques, such as adding noise, rotation, or scaling to your labeled examples, to increase the diversity of your dataset and make the model more robust._
+
+### Other resources:
+
+- [transkribus github](https://github.com/transkribus/)
+
+- PyLaia and Kaldi
+
+- [Multidimensional Recurrent Layers needed ?](https://ieeexplore.ieee.org/document/8269951)
