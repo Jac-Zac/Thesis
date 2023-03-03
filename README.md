@@ -2,7 +2,11 @@
 
 ### Most Relevant material to read
 
+### [`MUST READ`](https://direct.mit.edu/dint/article/4/2/320/109837/The-Specimen-Data-Refinery-A-Canonical-Workflow)
+
 #### [`Comprensive Blog good started`](https://nanonets.com/blog/handwritten-character-recognition/)
+
+- [ ] Cool [OCR-transformer](https://arxiv.org/abs/2109.10282) I want to use this and I have to find the pre-trained model to use
 
 - [Convolve Attend and Spell paper](https://priba.github.io/assets/publi/conf/2018_GCPR_LKang.pdf)
 
@@ -28,6 +32,7 @@
 > Ask chatGPT to write a better paper for you
 
 - [ ] Format the repository
+- Take a look at [this facebook github repo](https://github.com/facebookresearch/SparseConvNet)
 - [ ] Take a look at Attention is all you need again
 - [ ] Take inspiration from [this](https://github.com/AlbertoPresta/Thesis)
 - [ ] ViT pytorch implementation [hear](https://github.com/lucidrains/vit-pytorch)
