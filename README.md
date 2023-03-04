@@ -4,6 +4,9 @@
 
 ### [`MUST READ`](https://direct.mit.edu/dint/article/4/2/320/109837/The-Specimen-Data-Refinery-A-Canonical-Workflow)
 
+
+#### [Comprensive paper](https://arxiv.org/ftp/arxiv/papers/2104/2104.08732.pdf)
+
 #### [`Comprensive Blog good started`](https://nanonets.com/blog/handwritten-character-recognition/)
 
 - [ ] Cool [OCR-transformer](https://arxiv.org/abs/2109.10282) I want to use this and I have to find the pre-trained model to use
