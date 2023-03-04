@@ -86,3 +86,30 @@ _To improve the performance of your model, you can also consider data augmentati
 - PyLaia and Kaldi
 
 - [Multidimensional Recurrent Layers needed ?](https://ieeexplore.ieee.org/document/8269951)
+
+### Dataset:
+
+- IDigBio
+- PlantCLEF
+- SERNEC
+- GBIF
+
+> Pheraps you trasfer learn on thouse and then do fine tuning on your dataset
+
+- herbarium challenge 2019 dataset and the PlantCLEF202
+
+- https://doi.org/10.1080/23818107.2018.1446357
+
+- Github repo https://github.com/Ab-Abdurrahman/ubd-herbarium-repository
+
+107] A. Barber, D. Lafferty, L.R. Landrum, The SALIX method: A semi-automated workflow for herbarium specimen
+
+digitization, Taxon. 62 (2013) 581–590. https://doi.org/10.12705/623.16.
+[108] P.B. Heidorn, Q. Zhang, Label Annotation through Biodiversity Enhanced Learning, in: IConference 2013 Proc., 2013:
+
+pp. 882–884. https://doi.org/10.9776/13450.
+
+[109] E.R. Ellwood, B.A. Dunckel, P. Flemons, R. Guralnick, G. Nelson, G. Newman, S. Newman, D. Paul, G. Riccardi, N.
+
+Rios, K.C. Seltmann, A.R. Mast, Accelerating the digitization of biodiversity research specimens through online
+public participation, Bioscience. 65 (2015) 383–396. https://doi.org/10.1093/biosci/biv005.
