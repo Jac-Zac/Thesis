@@ -16,3 +16,12 @@ A questo punto comunque prenderei un grande dataset e comincerai su quello a far
 E poi fare fine tuning sul nostro dataset
 
 Vedere quello che si ottiene e poi fare (NER) con un LLM. In caso questo si può unire a TrOCR in futuro o almeno questo sarebbe quello che vorrei per fare end to end.
+
+#### Problem statement:
+
+```
+I have images from an herbarium, I need to retrive the data from the labels (which can contain species name, name of the author, date, etc...) I was thinking of using something like YOLO to find the label and crop only those from my entire dataset and then use TrOCR to recognize the text from every image and then do (NER) to devide them in the correct entities. I need your help first of all what do you think about this plan is it feasable ?```
+
+```
+Oky I have a problem though TrOCR need a line of text If I give it the entire label I don't think It will work so what can I do ? Can I just go with that and it will learn to do it in the transfer learning stage ? I do not think so so what should I do ? Can I perhaps devide the labels in multiples line somehow automatically ? Because if I try that I think I need to recognize the lines of text and I do not know how to do that. Maybe there is something that can help me with that
+```

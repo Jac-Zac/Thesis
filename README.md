@@ -89,10 +89,9 @@ _To improve the performance of your model, you can also consider data augmentati
 
 ### Dataset:
 
+- *SERNEC* really good
 - IDigBio
-- PlantCLEF
-- SERNEC
-- GBIF
+<!-- - GBIF -->
 
 > Pheraps you trasfer learn on thouse and then do fine tuning on your dataset
 
@@ -113,3 +112,7 @@ pp. 882–884. https://doi.org/10.9776/13450.
 
 Rios, K.C. Seltmann, A.R. Mast, Accelerating the digitization of biodiversity research specimens through online
 public participation, Bioscience. 65 (2015) 383–396. https://doi.org/10.1093/biosci/biv005.
+
+#### Remember
+
+Use batchnorm to control the statistic of activation we place it after Conv or linear Layers, no need for bias in the previous layer if you use it
