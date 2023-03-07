@@ -25,3 +25,6 @@ I have images from an herbarium, I need to retrive the data from the labels (whi
 ```
 Oky I have a problem though TrOCR need a line of text If I give it the entire label I don't think It will work so what can I do ? Can I just go with that and it will learn to do it in the transfer learning stage ? I do not think so so what should I do ? Can I perhaps devide the labels in multiples line somehow automatically ? Because if I try that I think I need to recognize the lines of text and I do not know how to do that. Maybe there is something that can help me with that
 ```
+
+
+#### Take a look at [this for recognition of text](https://arxiv.org/abs/2104.07787)
