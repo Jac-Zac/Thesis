@@ -53,30 +53,11 @@
 
 Also keep in mind that combining multiple predictors can be a very powerful technique as well [see](https://dl.gi.de/handle/20.500.12116/16993)
 
-### Response:
-
-```
-HTR is a little bit of a dark art as its performance is highly dependent on data quality which depends both on age, writing style, writing substrate, etc...
-Broadly there are two worlds:
-1. HTR without a language model
-2. HTR with a language model
-The advantage of having a language model is that corrections that would ordinarily exceed the signal-to-noise ration of the original source can still be fixed by e.g. considering the sentence's grammar.
-However, this is also a double edged sword since these models are also very prone to hallucinating or adding in words not in the original source with the frequency of such hallucinations being very well correlated with the strength of the language model.
-
-The fact that you have data usually bodes well since this helps a lot to narrow down the specificities of your dataset.
-The difference between success and failure is usually directly related in how much noise you can get rid of during preprocessing, so if you can clean you data through e.g. binarization and morphological operators this can make a huge difference.
-If you have a rough idea about what is in your dataset, you can also use that to fix your recognitions (e.g. instead of hoping a language model will fix errors, you can do a dictonary lookup for similar terms and potentially fix the results).
-```
-
 ### Things I have to do
 
 _To improve the performance of your model, you can also consider data augmentation techniques, such as adding noise, rotation, or scaling to your labeled examples, to increase the diversity of your dataset and make the model more robust._
 
 ### Other resources:
-
-- [transkribus github](https://github.com/transkribus/)
-
-- PyLaia and Kaldi
 
 - [Multidimensional Recurrent Layers needed ?](https://ieeexplore.ieee.org/document/8269951)
 
@@ -86,7 +67,7 @@ _To improve the performance of your model, you can also consider data augmentati
 - IDigBio
 <!-- - GBIF -->
 
-> Pheraps you trasfer learn on thouse and then do fine tuning on your dataset
+> Pheraps you transfer learn on thouse and then do fine tuning on your dataset
 
 - herbarium challenge 2019 dataset and the PlantCLEF202
 
