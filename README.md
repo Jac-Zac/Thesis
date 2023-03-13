@@ -2,14 +2,7 @@
 
 ### Most Relevant material to read
 
-### [`MUST READ`](https://direct.mit.edu/dint/article/4/2/320/109837/The-Specimen-Data-Refinery-A-Canonical-Workflow)
-
-
-#### [Comprensive paper](https://arxiv.org/ftp/arxiv/papers/2104/2104.08732.pdf)
-
-#### [`Comprensive Blog good started`](https://nanonets.com/blog/handwritten-character-recognition/)
-
-- [ ] Cool [OCR-transformer](https://arxiv.org/abs/2109.10282) I want to use this and I have to find the pre-trained model to use
+<!-- ### [`MUST READ by the teacher`](https://direct.mit.edu/dint/article/4/2/320/109837/The-Specimen-Data-Refinery-A-Canonical-Workflow) -->
 
 - [Convolve Attend and Spell paper](https://priba.github.io/assets/publi/conf/2018_GCPR_LKang.pdf)
 
@@ -116,3 +109,10 @@ public participation, Bioscience. 65 (2015) 383–396. https://doi.org/10.1093/b
 #### Remember
 
 Use batchnorm to control the statistic of activation we place it after Conv or linear Layers, no need for bias in the previous layer if you use it
+
+> Magari per il transfer learning aggiungere dei token speciali tipo dei CLS (classification token) ovviamente voglio usare Transformers e per ocr ViT anche se CLS non sempre e la cosa migliore a quanto pare fare un averege pooling over all the hidden states
+
+E poi fare fine tuning sul nostro dataset
+
+Vedere quello che si ottiene e poi fare (NER) con un LLM. In caso questo si può unire a TrOCR in futuro o almeno questo sarebbe quello che vorrei per fare end to end.
+<!-- A questo punto comunque prenderei un grande dataset e comincerai su quello a fare transfer learning a partire da [TrOCR](https://huggingface.co/docs/transformers/model_doc/trocr) -->

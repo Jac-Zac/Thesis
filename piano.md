@@ -1,30 +1,45 @@
-# Prima cosa da fare dal dataset prendere il testo
+# Piano per il progetto
 
-- [X] Ho letto questa [Systematic Literature Review](https://arxiv.org/ftp/arxiv/papers/2104/2104.08732.pdf) e notata che a pagina 23, 24 parlano di quello che ci interessa.
+### Idea generale divisa in step:
+> I seguenti punti verrano giustificati brevemente sotto
 
-- [ ] In particolare questo articolo sembra anche interessante: [Towards a scientific workflow + NLP](https://riojournal.com/article/55789/element/4/5731002//)
+1. Concentrarci inizialmente sul tagliare il testo dall'immagine, prima ritagliare solo le labels (anche grossolanamente ma tenendo tutto il testo), poi concentrarci sul fare `line segmentation`, questo non con tecniche di deep learning a meno che non siano tools già presenti.
 
-- [X] E invece prima bisogna selezionare il testo per farlo si può inizialmente usare: https://www.researchgate.net/publication/340039970_Objects_Detection_from_Digitized_Herbarium_Specimen_based_on_Improved_YOLO_V3 (anceh se secondo me si può fare di meglio anche qui ma per adesso mi basta YOLO anche normale)
+> Se questo primo step è fattibile anche non ottenendo risultati perfetti su tutto il dataset direi che si può continuare e focalizzarsi sugli step successivi
 
-- [ ] Questo spiega un framework generale: https://docs.google.com/viewerng/viewer?url=https://digital.csic.es/bitstream/10261/239620/1/814319.pdf
+> Se invece questa parte si rivela troppo problematica si può pensare di allenare un modello da zero che invece di prendere linee di testo prenda un'intera immagine, (oppure ci sono potenziali altri modelli su cui dovrei informarmi di più)
 
+2. Usare il base model [TrOCR](https://arxiv.org/pdf/2109.10282.pdf) e vedere che risultati otteniamo.
 
-A questo punto comunque prenderei un grande dataset e comincerai su quello a fare transfer learning a partire da [TrOCR](https://huggingface.co/docs/transformers/model_doc/trocr)
+3. Fare Fine-tuning con i nostri dati e volendo anche altri dataset trovati online per esempio di Erbari.
 
-> Magari per il transfer learning aggiungere dei token speciali tipo dei CLS (classification token) ovviamente voglio usare Transformers e per ocr ViT
+3. A questo punto vedere di capire meglio come integrare NER (Name Entity Recognition) nel nostro stack. Quello che spero di fare sarebbe riuscire ad rimpiazzare i layer finali di TrOCR e fare transfer learning per il nostro task nello specifico.
 
-E poi fare fine tuning sul nostro dataset
+### Giustificazioni
 
-Vedere quello che si ottiene e poi fare (NER) con un LLM. In caso questo si può unire a TrOCR in futuro o almeno questo sarebbe quello che vorrei per fare end to end.
+1. Sostanzialmente l'idea di estrarre solo la parte rilevante dell' immagine per il riconoscimento dovrebbe dare risultati migliori, forse ho anche visto un articolo in cui facevano la stessa cosa ma comunque è decisamente più sensato che fare una cosa End to End partendo dall'immagine a mio parere, anche se in futuro si potrebbe sempre provare un approccio di questo tipo
 
-#### Problem statement:
+2. Usare TrOCR o un architettura similare (ViT [Visual Transform](https://arxiv.org/pdf/2010.11929.pdf)). Per più ragioni:
+    - Migliori performance come si vede in [questo articolo](https://arxiv.org/pdf/2203.11008.pdf) per Historical Documents
+    - (Parere personale) Quello che un encoder-decoder transformer impara è più simile al task successivo di NER e potrebbe inoltre essere meglio incorporato con qualcosa tipo [BERT](https://arxiv.org/pdf/1810.04805.pdf)
 
-```
-I have images from an herbarium, I need to retrive the data from the labels (which can contain species name, name of the author, date, etc...) I was thinking of using something like YOLO to find the label and crop only those from my entire dataset and then use TrOCR to recognize the text from every image and then do (NER) to devide them in the correct entities. I need your help first of all what do you think about this plan is it feasable ?```
+---
+##### Per quanto riguarda i possibili problemi con la line segmentation:
 
-```
-Oky I have a problem though TrOCR need a line of text If I give it the entire label I don't think It will work so what can I do ? Can I just go with that and it will learn to do it in the transfer learning stage ? I do not think so so what should I do ? Can I perhaps devide the labels in multiples line somehow automatically ? Because if I try that I think I need to recognize the lines of text and I do not know how to do that. Maybe there is something that can help me with that
-```
+Potenzialmente si potrebbe pensare ad un alternativo modello che non richiede line segmentation, però io preferirei rimanere comunque un ViT e non cose come CNN o LSTM (anche perché TrOCR è SOTA).
 
+#### Potenziale materiale da esplorare [this for recognition of text](https://arxiv.org/abs/2104.07787)
 
-#### Take a look at [this for recognition of text](https://arxiv.org/abs/2104.07787)
+### Materiali che ho guardato o non ho finito ma sono interessanti
+
+- [X] Ho letto questa [Systematic Literature Review](https://arxiv.org/ftp/arxiv/papers/2104/2104.08732.pdf), la parte importante è a pagina 23, 24. (però mostra cose vecchie per esempio uso di LSTM quando io vorrei usare Transformers)
+
+- [X] Da leggere con più attenzione, [TrOCR on Historical Documents](https://arxiv.org/pdf/2203.11008.pdf)
+
+- [ ] Articolo che sembra anche interessante per un workflow generale: [Towards a scientific workflow + NLP](https://riojournal.com/article/55789/element/4/5731002//)
+
+- [X] Trovare il testo in un [herbarium con YOLO](https://www.researchgate.net/publication/340039970_Objects_Detection_from_Digitized_Herbarium_Specimen_based_on_Improved_YOLO_V3) anche se non voglio focalizzarmi su questo dato che i dati per fare questa parte non sono quello che abbiamo
+
+- [X] Questo spiega un [framework generale](https://docs.google.com/viewerng/viewer?url=https://digital.csic.es/bitstream/10261/239620/1/814319.pdf) poco interessante
+
+- [X] Letto ma da rileggere per ragionarci su, sopratutto sulla parte finale: [`Comprensive Blog post on HTR`](https://nanonets.com/blog/handwritten-character-recognition/)
