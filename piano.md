@@ -43,3 +43,15 @@ Potenzialmente si potrebbe pensare ad un alternativo modello che non richiede li
 - [X] Questo spiega un [framework generale](https://docs.google.com/viewerng/viewer?url=https://digital.csic.es/bitstream/10261/239620/1/814319.pdf) poco interessante
 
 - [X] Letto ma da rileggere per ragionarci su, sopratutto sulla parte finale: [`Comprensive Blog post on HTR`](https://nanonets.com/blog/handwritten-character-recognition/)
+
+
+### Other idea:
+> [LayoutLMv3](https://huggingface.co/docs/transformers/main/en/model_doc/layoutlmv3)
+
+[Donut really good](https://huggingface.co/docs/transformers/main/en/model_doc/donut)
+
+#### Or I could just write my model taking:
+
+[Swin](https://www.youtube.com/watch?v=SndHALawoag)
+
+And then something like BERT or LLAMA7B and use that to train the entire stack
