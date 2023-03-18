@@ -3,7 +3,9 @@
 ### Idea generale divisa in step:
 > I seguenti punti verrano giustificati brevemente sotto
 
-1. Concentrarci inizialmente sul tagliare il testo dall'immagine, prima ritagliare solo le labels (anche grossolanamente ma tenendo tutto il testo), poi concentrarci sul fare `line segmentation`, questo non con tecniche di deep learning a meno che non siano tools già presenti.
+1. Concentrarci inizialmente sul tagliare il testo dall'immagine, prima ritagliare solo le labels (anche grossolanamente ma tenendo tutto il testo), poi concentrarci sul fare `line segmentation`, questo non con tecniche di deep learning a meno che non siano tools già presenti. I think I will use something like this for line segmentation: [LayoutLMv3](https://arxiv.org/pdf/2204.08387.pdf). Thought I'd like something else because It cant be used for real products. But this is a replaceable part of the stack
+Text segmentation also can use [MMOCR](https://github.com/open-mmlab/mmocr)
+
 
 > Se questo primo step è fattibile anche non ottenendo risultati perfetti su tutto il dataset direi che si può continuare e focalizzarsi sugli step successivi
 
@@ -46,7 +48,6 @@ Potenzialmente si potrebbe pensare ad un alternativo modello che non richiede li
 
 
 ### Other idea:
-> [LayoutLMv3](https://huggingface.co/docs/transformers/main/en/model_doc/layoutlmv3)
 
 [Donut really good](https://huggingface.co/docs/transformers/main/en/model_doc/donut)
 
@@ -55,3 +56,5 @@ Potenzialmente si potrebbe pensare ad un alternativo modello che non richiede li
 [Swin](https://www.youtube.com/watch?v=SndHALawoag)
 
 And then something like BERT or LLAMA7B and use that to train the entire stack
+
+[SegFormer sota](https://www.youtube.com/watch?v=cgq2d_HkfnM)
