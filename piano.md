@@ -58,3 +58,13 @@ Potenzialmente si potrebbe pensare ad un alternativo modello che non richiede li
 And then something like BERT or LLAMA7B and use that to train the entire stack
 
 [SegFormer sota](https://www.youtube.com/watch?v=cgq2d_HkfnM)
+
+Text is text: `https://www.youtube.com/watch?v=8VLkaf_hGdQ`
+
+### Initial plan:
+
+- Start out by trying [Donut](https://huggingface.co/docs/transformers/main/en/model_doc/donut)
+
+- Than you can train it on your data with the token <extract-importants>
+
+- Then you can instead retrain it on HTR with <extract>
