@@ -97,3 +97,5 @@ E poi fare fine tuning sul nostro dataset
 
 Vedere quello che si ottiene e poi fare (NER) con un LLM. In caso questo si può unire a TrOCR in futuro o almeno questo sarebbe quello che vorrei per fare end to end.
 <!-- A questo punto comunque prenderei un grande dataset e comincerai su quello a fare transfer learning a partire da [TrOCR](https://huggingface.co/docs/transformers/model_doc/trocr) -->
+
+- Changes to the pre-recommit
