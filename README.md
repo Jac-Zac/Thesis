@@ -99,3 +99,5 @@ Vedere quello che si ottiene e poi fare (NER) con un LLM. In caso questo si può
 <!-- A questo punto comunque prenderei un grande dataset e comincerai su quello a fare transfer learning a partire da [TrOCR](https://huggingface.co/docs/transformers/model_doc/trocr) -->
 
 - Changes to the pre-recommit
+
+- Donutn [fine-tuning-donut](https://www.philschmid.de/fine-tuning-donut) try to set it up
