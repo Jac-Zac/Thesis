@@ -70,3 +70,5 @@ Text is text: `https://www.youtube.com/watch?v=8VLkaf_hGdQ`
 - Then you can instead retrain it on HTR with <extract>
 
 #### Or switch to Donut following [this](https://www.philschmid.de/fine-tuning-donut)
+
+- Potentially do some LORA fine-tuning or something like that on Donut or just build another model to detect a box around the text we want to use and then use it to cut the images automatically as a second step to make performances better
