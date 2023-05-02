@@ -68,3 +68,5 @@ Text is text: `https://www.youtube.com/watch?v=8VLkaf_hGdQ`
 - Than you can train it on your data with the token <extract-importants>
 
 - Then you can instead retrain it on HTR with <extract>
+
+#### Or switch to Donut following [this](https://www.philschmid.de/fine-tuning-donut)
