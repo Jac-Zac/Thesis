@@ -74,3 +74,5 @@ Text is text: `https://www.youtube.com/watch?v=8VLkaf_hGdQ`
 - Potentially do some LORA fine-tuning or something like that on Donut or just build another model to detect a box around the text we want to use and then use it to cut the images automatically as a second step to make performances better
 
 - I also believe that the accuracy will be pretty low if we look for exact string matching. And as the model gets better we would get to see an emergent jump in performance similarly to what is suggested in the paper: ```https://arxiv.org/pdf/2304.15004.pdf``` Thus I believe we shouldn't evaluate the model only on the exact match but have a more continues  way to evaluate it to get a more realistic accuracy and scaling for the future models. Look at something like (Token Edit Distance)
+
+- UBIAI https://ubiai.tools/Docs#modelcreation for data annotation
