@@ -4,3 +4,4 @@
 **/*.ipynb_checkpoints/
 **/*DAti_TSB_Stoppari.xlsx
 to_read/
+**/donut_example/data
