@@ -78,3 +78,5 @@ Text is text: `https://www.youtube.com/watch?v=8VLkaf_hGdQ`
 - UBIAI https://ubiai.tools/Docs#modelcreation for data annotation
 
 - Read this for segmentation: https://www.researchgate.net/publication/340039970_Objects_Detection_from_Digitized_Herbarium_Specimen_based_on_Improved_YOLO_V3
+
+- Use this dataset: ```herbarium Haussknecht of FSU Jena.``` for further training and use more then YOLO v4
