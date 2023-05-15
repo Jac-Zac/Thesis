@@ -84,4 +84,4 @@ Text is text: `https://www.youtube.com/watch?v=8VLkaf_hGdQ`
 - For all the predicted words I want to see the attention map to where they point and maybe do some noice visualization
 
 
-#### First test accuracy of 73% on test set if I remember correctly
+#### First test accuracy of 83% on test set if I remember correctly
