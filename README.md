@@ -29,7 +29,7 @@
 
 - [ ] Format the repository
 - Take a look at [this facebook github repo](https://github.com/facebookresearch/SparseConvNet)
-- [ ] Take a look at Attention is all you need again
+- [X] Re reed Attention is all you need again
 - [ ] Take inspiration from [this](https://github.com/AlbertoPresta/Thesis)
 - [ ] ViT pytorch implementation [hear](https://github.com/lucidrains/vit-pytorch)
 - [ ] Read [this](https://nanonets.com/blog/handwritten-character-recognition/) article for information, interesting part start from `Scan, Attend and Read`
@@ -60,44 +60,3 @@ _To improve the performance of your model, you can also consider data augmentati
 ### Other resources:
 
 - [Multidimensional Recurrent Layers needed ?](https://ieeexplore.ieee.org/document/8269951)
-
-### Dataset:
-
-- *SERNEC* really good
-- IDigBio
-<!-- - GBIF -->
-
-> Pheraps you transfer learn on thouse and then do fine tuning on your dataset
-
-- herbarium challenge 2019 dataset and the PlantCLEF202
-
-- https://doi.org/10.1080/23818107.2018.1446357
-
-- Github repo https://github.com/Ab-Abdurrahman/ubd-herbarium-repository
-
-107] A. Barber, D. Lafferty, L.R. Landrum, The SALIX method: A semi-automated workflow for herbarium specimen
-
-digitization, Taxon. 62 (2013) 581–590. https://doi.org/10.12705/623.16.
-[108] P.B. Heidorn, Q. Zhang, Label Annotation through Biodiversity Enhanced Learning, in: IConference 2013 Proc., 2013:
-
-pp. 882–884. https://doi.org/10.9776/13450.
-
-[109] E.R. Ellwood, B.A. Dunckel, P. Flemons, R. Guralnick, G. Nelson, G. Newman, S. Newman, D. Paul, G. Riccardi, N.
-
-Rios, K.C. Seltmann, A.R. Mast, Accelerating the digitization of biodiversity research specimens through online
-public participation, Bioscience. 65 (2015) 383–396. https://doi.org/10.1093/biosci/biv005.
-
-#### Remember
-
-Use batchnorm to control the statistic of activation we place it after Conv or linear Layers, no need for bias in the previous layer if you use it
-
-> Magari per il transfer learning aggiungere dei token speciali tipo dei CLS (classification token) ovviamente voglio usare Transformers e per ocr ViT anche se CLS non sempre e la cosa migliore a quanto pare fare un averege pooling over all the hidden states
-
-E poi fare fine tuning sul nostro dataset
-
-Vedere quello che si ottiene e poi fare (NER) con un LLM. In caso questo si può unire a TrOCR in futuro o almeno questo sarebbe quello che vorrei per fare end to end.
-<!-- A questo punto comunque prenderei un grande dataset e comincerai su quello a fare transfer learning a partire da [TrOCR](https://huggingface.co/docs/transformers/model_doc/trocr) -->
-
-- Changes to the pre-recommit
-
-- Donutn [fine-tuning-donut](https://www.philschmid.de/fine-tuning-donut) try to set it up
