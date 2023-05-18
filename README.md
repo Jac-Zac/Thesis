@@ -60,3 +60,11 @@ _To improve the performance of your model, you can also consider data augmentati
 ### Other resources:
 
 - [Multidimensional Recurrent Layers needed ?](https://ieeexplore.ieee.org/document/8269951)
+
+- I have to take a look at the outliers in the dataset. You can simply run the model on the entire dataset and see the wrong predictions to take a look at those and perhaps exclude them for the next training.
+
+- We really need to have a clean dataset for the model evaluation
+
+- Also using the median for example gives a way better score which should tell us a lot
+
+- Also high res images seem to give better result but do not use early stopping I still improvement at the 10k example steps and after
