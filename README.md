@@ -68,3 +68,7 @@ _To improve the performance of your model, you can also consider data augmentati
 - Also using the median for example gives a way better score which should tell us a lot
 
 - Also high res images seem to give better result but do not use early stopping I still improvement at the 10k example steps and after
+
+#### Future thing's to do:
+
+- Build a pipline and a gradio app to shere it. You can take inspiration from [this](https://huggingface.co/spaces/laverdes/donut-web-space/blob/main/app.py)
