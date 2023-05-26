@@ -85,3 +85,5 @@ Text is text: `https://www.youtube.com/watch?v=8VLkaf_hGdQ`
 
 
 #### First test accuracy of 83% on test set if I remember correctly
+
+The image 005294.jpg was wierd
