@@ -87,3 +87,7 @@ Text is text: `https://www.youtube.com/watch?v=8VLkaf_hGdQ`
 #### First test accuracy of 83% on test set if I remember correctly
 
 The image 005294.jpg was wierd
+
+- Maybe use data augmentation flipping the images and wathsoever
+
+- Perhaps you can also think about generation fake images with handwritings for the labels you can use a model crop the labels and make fake version of the text like in the Donut paper
