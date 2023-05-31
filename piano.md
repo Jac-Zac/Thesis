@@ -100,7 +100,7 @@ The image 005294.jpg was wierd
 
 - Visualize model attention https://github.com/clovaai/donut/issues/45
 
-- Use the synthdog with a new text file names for the species that might be interesting and for the localites to, to teach the model how to read, and then do the finetuning.
+- Use the synthdog with a new text file names for the species that might be interesting and for the localites to, to teach the model how to read, and then do the finetuning. I think it would be better if the sytnetic generated examples where in a form similar to an herbarium image (which allows us to add a bias which is really useful)
 
 - Reaed this paper on OCR: https://arxiv.org/pdf/2111.02622.pdf
 
