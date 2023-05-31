@@ -93,3 +93,15 @@ The image 005294.jpg was wierd
 - Perhaps you can also think about generation fake images with handwritings for the labels you can use a model crop the labels and make fake version of the text like in the Donut paper
 
 - Perhaps we can think of giving the model negative examples which can be images without labels but the ground truth must be without labels to
+
+- Possibile do some selfe supervision with a good modle to match plants whicwh names are in the possible names on a larger dataset and then use those as training data
+
+- Learn more about https://github.com/jessevig/bertviz
+
+- Visualize model attention https://github.com/clovaai/donut/issues/45
+
+- Use the synthdog with a new text file names for the species that might be interesting and for the localites to, to teach the model how to read, and then do the finetuning.
+
+- Reaed this paper on OCR: https://arxiv.org/pdf/2111.02622.pdf
+
+- We can also think of a way to use the unlabeled data and also to have more biases to be able to learn faster
