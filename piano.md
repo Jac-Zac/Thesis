@@ -1,5 +1,7 @@
 # Piano per il progetto
 
+- Restart during summer, read the paper you have to read and do some training test
+
 ### Idea generale divisa in step:
 > I seguenti punti verrano giustificati brevemente sotto
 
