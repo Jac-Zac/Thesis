@@ -2,6 +2,9 @@
 
 - Restart during summer, read the paper you have to read and do some training test
 
+- read this: [domain adaption](https://towardsdatascience.com/understanding-domain-adaptation-5baa723ac71f)
+
+
 ### Idea generale divisa in step:
 > I seguenti punti verrano giustificati brevemente sotto
 
