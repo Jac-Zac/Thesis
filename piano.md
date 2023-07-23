@@ -113,3 +113,20 @@ The image 005294.jpg was wierd
 - Reaed this paper on OCR: https://arxiv.org/pdf/2111.02622.pdf
 
 - We can also think of a way to use the unlabeled data and also to have more biases to be able to learn faster
+
+
+#### New ideas
+
+Yes, it's possible to fine-tune Donut's visual question answering capabilities on your own dataset and give it access to the internet to respond. Here's a general outline of the steps involved:
+
+    Prepare your dataset: Collect and annotate a dataset of images and their corresponding questions and answers. Make sure the annotations are in a format that Donut can understand.
+    Fine-tune Donut on your dataset: Use Donut's built-in tools or libraries like Hugging Face's Transformers to fine-tune the model on your dataset. This step will update the model's weights to better suit your specific use case.
+    Give Donut access to the internet: To enable Donut to respond to questions by accessing the internet, you'll need to set up an environment that allows it to send HTTP requests and receive responses. One way to do this is by using a library like requests in Python.
+    Modify Donut's response generation code: Once Donut has accessed the internet and retrieved relevant information, you'll need to modify its response generation code to incorporate the new information. This might involve injecting the new information into the model's output or using a different decoder to generate the final response.
+    Test and evaluate the updated Donut model: After making changes to the model, test it thoroughly to ensure it's working correctly and providing accurate responses. Evaluate the model's performance on a validation set to assess its effectiveness.
+    Deploy the updated Donut model: Once you're satisfied with the model's performance, deploy it so that it can respond to user queries. You can host the model on a server, containerize it, or use a cloud service like AWS Lambda.
+    Monitor and maintain the model: As time passes, the model may become outdated or less effective due to changes in the internet landscape or user behavior. Regularly monitor the model's performance and retrain or update it as needed to maintain its accuracy and relevance.
+
+Keep in mind that modifying Donut's architecture or training procedure requires a good understanding of deep learning and natural language processing concepts. It's essential to have experience with PyTorch or another deep learning framework, as well as familiarity with transformer-based architectures like BERT and ResNet.
+
+Additionally, consider the ethical implications of giving Donut access to the internet and allowing it to provide open-ended responses. Ensure that the model is designed with safeguards to prevent misuse or abuse, such as filtering profanity or hate speech, and that users are aware of the potential risks associated with interacting with AI systems.
