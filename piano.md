@@ -6,6 +6,8 @@
 
 - A new good Idea could be to have a tranformer trained like a swin traformer and then finetuned by me to recognize the labels to then have something like bing recognize what is written with access to internet usinig an llm.
 
+- Bing likes to stop responding by I could do visual question answering with Donut also think about it. O do something else to. Also enable internet access maybe with langchain ?
+
 ### Idea generale divisa in step:
 > I seguenti punti verrano giustificati brevemente sotto
 
