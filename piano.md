@@ -1,6 +1,6 @@
 # Piano per il progetto
 
-- Restart during summer, read the paper you have to read and do some training test
+- Take a look at [Florence](https://arxiv.org/pdf/2111.11432.pdf)
 
 - read this: [domain adaption](https://towardsdatascience.com/understanding-domain-adaptation-5baa723ac71f)
 
