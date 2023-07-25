@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/homebrew/anaconda3/bin/streamlit run
 import json
 from io import BytesIO
 
@@ -6,25 +6,17 @@ import cv2
 import numpy as np
 import requests
 import streamlit as st
-from PIL import ExifTags
 from PIL import Image
+from PIL import ImageOps
 
+# Image processing change the orientation if needed and the size accordingly to the model we use
 def preprocess_image(image, size):
     # Resize the image to a specific size
     image = image.resize(size)
 
-    # Check if the image has orientation metadata and rotate it if necessary
-    for orientation in ExifTags.TAGS.keys():
-        if ExifTags.TAGS[orientation] == "Orientation":
-            if hasattr(image, "_getexif"):
-                exif = dict(image._getexif().items())
-                if exif[orientation] == 3:
-                    image = image.rotate(180, expand=True)
-                elif exif[orientation] == 6:
-                    image = image.rotate(270, expand=True)
-                elif exif[orientation] == 8:
-                    image = image.rotate(90, expand=True)
-            break
+    # Automatically rotate the image based on its EXIF orientation metadata
+    image = ImageOps.exif_transpose(image)
+
     return image
 
 
