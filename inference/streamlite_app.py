@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
+import os
+
 import streamlit as st
 import torch
-from PIL import ExifTags
 from PIL import Image
+from PIL import ImageOps
 from transformers import DonutProcessor
 from transformers import VisionEncoderDecoderConfig
 from transformers import VisionEncoderDecoderModel
@@ -59,18 +61,8 @@ def preprocess_image(image, size):
     # Resize the image to a specific size
     image = image.resize(size)
 
-    # Check if the image has orientation metadata and rotate it if necessary
-    for orientation in ExifTags.TAGS.keys():
-        if ExifTags.TAGS[orientation] == "Orientation":
-            if hasattr(image, "_getexif"):
-                exif = dict(image._getexif().items())
-                if exif[orientation] == 3:
-                    image = image.rotate(180, expand=True)
-                elif exif[orientation] == 6:
-                    image = image.rotate(270, expand=True)
-                elif exif[orientation] == 8:
-                    image = image.rotate(90, expand=True)
-            break
+    # Automatically rotate the image based on its EXIF orientation metadata
+    image = ImageOps.exif_transpose(image)
 
     return image
 
@@ -87,9 +79,9 @@ Experimental OCR-free Document Understanding Vision Transformer, fine-tuned with
 with st.sidebar:
     information = st.radio(
         "Choose one predictor:",
-        ("Low Res (1200 * 900) 5 epochs", "Mid res (1600 ^ 1200) 10 epochs"),
+        ("Low Res (1200 * 900) 5 epochs", "Mid res (1600 * 1200) 10 epochs", "Mid res (1600 * 1200) 14 epochs"),
     )
-    image_choice = st.selectbox("Pick one 📑", ["1", "2", "3"], index=1)
+    image_choice = st.selectbox("Pick one 📑", ["1", "2", "3"], index=0)
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
 st.text(
@@ -101,20 +93,17 @@ col1, col2 = st.columns(2)
 # Chose image
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
+    if information == "Low Res (1200 * 900) 5 epochs":
+        image = preprocess_image(image, (1200, 900))
+    else:
+        image = preprocess_image(image, (1600, 1200))
 else:
-    pass
-    # image_choice_map = {
-    #    '1': '../donut_example/copy/img_resized/test/00021.jpg',
-    #    '2': '../donut_example/copy/img_resized/test/00031.jpg',
-    #    '3': '../donut_example/copy/img_resized/test/00050.jpg',
-    # }
-    # image = Image.open(image_choice_map[image_choice])
-
-
-if information == "Low Res (1200 * 900) 5 epochs":
-    image = preprocess_image(image, (1200, 900))
-else:
-    image = preprocess_image(image, (1600, 1200))
+    image_choice_map = {
+        '1': 'examples/00021.jpg',
+        '2': 'examples/00031.jpg',
+        '3': 'examples/00050.jpg',
+     }
+    image = Image.open(image_choice_map[image_choice])
 
 with col1:
     st.image(image, caption="Your target sample")
@@ -129,20 +118,36 @@ if st.button("Parse sample! 🐍"):
             processor = DonutProcessor.from_pretrained(
                 "Jac-Zac/thesis_test_donut",
                 revision="12900abc6fb551a0ea339950462a6a0462820b75",
+                # use_auth_token=os.environ["TOKEN"],
             )
             pretrained_model = VisionEncoderDecoderModel.from_pretrained(
                 "Jac-Zac/thesis_test_donut",
                 revision="12900abc6fb551a0ea339950462a6a0462820b75",
+                # use_auth_token=os.environ["TOKEN"],
             )
 
-        elif information == "Mid res (1600 ^ 1200) 10 epochs":
+        elif information == "Mid res (1600 * 1200) 10 epochs":
             processor = DonutProcessor.from_pretrained(
                 "Jac-Zac/thesis_test_donut",
                 revision="8c5467cb66685e801ec6ff8de7e7fdd247274ed0",
+                # use_auth_token=os.environ["TOKEN"],
             )
             pretrained_model = VisionEncoderDecoderModel.from_pretrained(
                 "Jac-Zac/thesis_test_donut",
                 revision="8c5467cb66685e801ec6ff8de7e7fdd247274ed0",
+                # use_auth_token=os.environ["TOKEN"],
+            )
+
+        elif information == "Mid res (1600 * 1200) 14 epochs":
+            processor = DonutProcessor.from_pretrained(
+                "Jac-Zac/thesis_test_donut",
+                revision="ba396d4b3d39a4eaf7c8d4919b384ebcf6f0360f",
+                # use_auth_token=os.environ["TOKEN"],
+            )
+            pretrained_model = VisionEncoderDecoderModel.from_pretrained(
+                "Jac-Zac/thesis_test_donut",
+                revision="ba396d4b3d39a4eaf7c8d4919b384ebcf6f0360f",
+                # use_auth_token=os.environ["TOKEN"],
             )
 
         # this is the same for both models
