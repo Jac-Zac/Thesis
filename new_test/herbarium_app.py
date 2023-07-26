@@ -1,22 +1,24 @@
-#!/opt/homebrew/anaconda3/bin/streamlit run
+#!/opt/homebrew/bin/streamlit run
 import base64
 import json
 from io import BytesIO
 
 import cv2
 import numpy as np
-import openai
 import requests
 import streamlit as st
+from langchain import HuggingFaceHub
+from langchain import LLMChain
+from langchain import PromptTemplate
 from PIL import Image
 from PIL import ImageOps
 from pytesseract import image_to_string
+from transformers import AutoModelForCausalLM
+from transformers import AutoTokenizer
 from transformers import pipeline
 
-# Set up the OpenAI API key and model
-model = "gpt-3.5-trivial- examples"
 
-# Define a function to preprocess the image
+# Define a function to pre process the image
 def preprocess_image(image, size):
     # Resize the image to a specific size
     image = image.resize(size)
@@ -32,30 +34,39 @@ def extract_text(image):
     text = image_to_string(image)
     return text
 
-# Define a function to extract information from the text using a language model
 def extract_information(text):
-    # Create a request to the OpenAI completion endpoint
-    headers = {"Content-Type": "application/json"}
-    payload = {
-        "engine": "text-davinci-002",
-        "prompt": f"Name of the species: \\nDate when it was found: \\nLocation where it was found: \\n\\nImage text: {text}",
-        "max_tokens": 1024,
-        "n": 1,
-        "stop": None,
-        "temperature": 0.7,
-    }
-    response = requests.post("https://api.openai.com/v1/engines/text-davinci-002/completions", headers=headers, data=json.dumps(payload))
+    model = HuggingFaceHub(repo_id='gpt2', huggingfacehub_api_token='your_token')
 
-    # Parse the response JSON
-    response_json = json.loads(response.content)
+    # Create a prompt with the template
+    template = '''
+    You have to give me only what I want so that I can save it as a json.
+    Based on the text I give you return:
+
+    - Name of the species:
+
+    - Date when it was found:
+
+    - Location where it was found:
+
+    IMAGE TEXT: {text}
+    '''
+
+    prompt = PromptTemplate(
+            input_variables=["text"],
+            template=template
+            )
+
+
+    llm_chain = LLMChain(prompt=prompt, llm=model, verbose=True)
+
+    informations = llm_chain.predict(text=text)
+
+    # Parse the response
+    response_json = json.loads(informations)
 
     st.write(response_json)
-    # Extract the first completion from the response
-    #completion = response_json["choices"][0]
 
-    # Return the extracted information in JSON
-    # return json.loads(completion["text"])
-    return json.loads(response_json)
+    return response_json
 
 # Set up the Streamlit app
 st.title("Herbarium Image Text Extractor")

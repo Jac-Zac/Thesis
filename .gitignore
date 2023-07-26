@@ -1,7 +1,6 @@
 **/.DS_Store
 **/__pycache__
 **/*.out
-**/.env
 **/*.ipynb_checkpoints/
 **/*DAti_TSB_Stoppari.xlsx
 to_read/
