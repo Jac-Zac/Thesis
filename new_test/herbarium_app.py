@@ -9,12 +9,15 @@ import requests
 import streamlit as st
 from langchain import HuggingFaceHub
 from langchain import LLMChain
+from langchain import OpenAI
 from langchain import PromptTemplate
+from langchain.output_parsers import ResponseSchema
+from langchain.output_parsers import StructuredOutputParser
+from langchain.prompts import ChatPromptTemplate
+from langchain.prompts import HumanMessagePromptTemplate
 from PIL import Image
 from PIL import ImageOps
 from pytesseract import image_to_string
-from transformers import pipeline
-
 
 # Define a function to pre process the image
 def preprocess_image(image, size):
@@ -34,34 +37,32 @@ def extract_text(image):
     return ocr_text
 
 
+# https://www.youtube.com/watch?v=2xxziIWmaSA minute 19 help formatting
 def extract_information(ocr_text):
-    model = HuggingFaceHub(
-        repo_id="google/flan-t5-base",
-    )
 
-    # Create a prompt with the template
-    # template = """
-    # You have to give me only what I want so that I can save it as a json.
-    # Based on the ocr text I give you return:
-    #
-    # - Name of the species:
-    #
-    # - Date when it was found:
-    #
-    # - Location where it was found:
-    #
-    # IMAGE OCR TEXT: {ocr_text}
-    # """
+    model = OpenAI(model_name = "text-davinci-003", openai_api_key=openai_api_key)
 
     template = """
-    what is this: {ocr_text} ?
+    OCR TEXT: {ocr_text}
+
+    Please extract the following information from the OCR text:
+
+    1. Species Name: `species_name`
+    2. Author: `author`
+    3. Date: `date`
+    4. Locatio: `location`
+
+    Model Output§:
     """
+
+    # You have to give me only what I want so that I can save it as a json.
 
     prompt = PromptTemplate(input_variables=["ocr_text"], template=template)
 
     llm_chain = LLMChain(prompt=prompt, llm=model, verbose=True)
 
     informations = llm_chain.predict(ocr_text=ocr_text)
+
     return informations
 
 
