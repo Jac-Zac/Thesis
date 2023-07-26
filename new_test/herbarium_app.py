@@ -38,21 +38,28 @@ def extract_text(image):
 
 
 # https://www.youtube.com/watch?v=2xxziIWmaSA minute 19 help formatting
+
+# Retrive and vector Stores
 def extract_information(ocr_text):
 
-    model = OpenAI(model_name = "text-davinci-003", openai_api_key=openai_api_key)
+    repo_id = "google/flan-t5-xxl"  # See https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads for some other options
+    # repo_id = "databricks/dolly-v2-3b"
+
+    model = HuggingFaceHub(
+        repo_id=repo_id, model_kwargs={"temperature": 0.5, "max_length": 64},
+    )
 
     template = """
     OCR TEXT: {ocr_text}
 
     Please extract the following information from the OCR text:
 
-    1. Species Name: `species_name`
-    2. Author: `author`
-    3. Date: `date`
-    4. Locatio: `location`
+    1. Species Name:
+    2. Author:
+    3. Date:
+    4. Locatio:
 
-    Model Output§:
+    JSON OUTPUT:
     """
 
     # You have to give me only what I want so that I can save it as a json.
