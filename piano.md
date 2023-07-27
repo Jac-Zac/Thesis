@@ -2,6 +2,8 @@
 
 ### This is what I was thinking to do https://huggingface.co/spaces/ajitrajasekharan/Image-Text-Detection to recognize text
 
+- Maybe also this: https://huggingface.co/docs/transformers/model_doc/mgp-str
+
 Find the best ocr/htr model that works on an entire images leveraging reformers.
 This is a good starting point https://portal.vision.cognitive.azure.com/demo/extract-text-from-images. I would like to find something open source though, I should also look at [florance](https://arxiv.org/pdf/2111.11432.pdf) or other open source alternatives.
 
