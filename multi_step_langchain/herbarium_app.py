@@ -19,34 +19,20 @@ from PIL import Image
 from PIL import ImageOps
 from pytesseract import image_to_string
 
-# Define a function to pre process the image
 def preprocess_image(image, size):
-    # Resize the image to a specific size
     image = image.resize(size)
-
-    # Automatically rotate the image based on its EXIF orientation metadata
     image = ImageOps.exif_transpose(image)
-
     return image
 
-
-# Define a function to extract text from the image using OCR
 def extract_text(image):
-    # Perform OCR on the image using PyTesseract
     ocr_text = image_to_string(image)
     return ocr_text
 
-
-# https://www.youtube.com/watch?v=2xxziIWmaSA minute 19 help formatting
-
-# Retrive and vector Stores
 def extract_information(ocr_text):
-
-    repo_id = "google/flan-t5-xxl"  # See https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads for some other options
-    # repo_id = "databricks/dolly-v2-3b"
-
+    repo_id = "google/flan-t5-xxl"
     model = HuggingFaceHub(
         repo_id=repo_id, model_kwargs={"temperature": 0.5, "max_length": 64},
+        huggingfacehub_api_token="your-token"
     )
 
     template = """
@@ -63,42 +49,43 @@ def extract_information(ocr_text):
     JSON OUTPUT:
     """
 
-    # You have to give me only what I want so that I can save it as a json.
-
     prompt = PromptTemplate(input_variables=["ocr_text"], template=template)
-
     llm_chain = LLMChain(prompt=prompt, llm=model, verbose=True)
-
     informations = llm_chain.predict(ocr_text=ocr_text)
 
     return informations
 
+st.set_page_config(
+    page_title="Herbarium Image Text Extractor",
+    page_icon="🌿",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
-# Set up the Streamlit app
-st.title("Herbarium Image Text Extractor")
+st.title("Herbarium Image Text Extractor Herbarium 🌿")
+st.sidebar.title("TrOCR Image Text Extractor")
+st.sidebar.write("Created by Jacopo Zacchigna")
+st.sidebar.markdown("[GitHub](https://github.com/Jac-Zac)")
 
-# Upload the image file
-uploaded_file = st.file_uploader(
+uploaded_file = st.sidebar.file_uploader(
     "Choose an herbarium image", type=["jpg", "jpeg", "png"]
 )
 
 if uploaded_file is not None:
-    # Convert the uploaded file to a PIL Image object
     image = Image.open(uploaded_file)
-
-    # Preprocess the image
     image = preprocess_image(image, (1600, 1200))
-
-    # Extract text from the image using OCR
     ocr_text = extract_text(image)
 
-    # Extract information from the text using the language model
-    information = extract_information(ocr_text)
+    col1, col2 = st.columns(2)
 
-    # Display the extracted information
-    st.write("Model Response:")
-    st.write(information)
-    print(information)
+    with col1:
+        st.subheader("Original Image")
+        st.image(image, use_column_width=True)
 
+    with col2:
+        st.subheader("Extracted Information")
+        if st.button("Run Extraction"):
+            information = extract_information(ocr_text)
+            st.write(information)
 else:
-    st.write("Please upload an image.")
+    st.sidebar.write("Please upload an image.")
