@@ -35,6 +35,8 @@ def extract_information(ocr_text):
         huggingfacehub_api_token="your-token"
     )
 
+    # Also search for response schema and structured output parser... I WANT JSON
+    # better prompt https://www.youtube.com/watch?v=jhI1z38Kj4I
     template = """
     OCR TEXT: {ocr_text}
 

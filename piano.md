@@ -2,15 +2,12 @@
 
 ### This is what I was thinking to do https://huggingface.co/spaces/ajitrajasekharan/Image-Text-Detection to recognize text
 
-- Maybe also this: https://huggingface.co/docs/transformers/model_doc/mgp-str
+- Try paddleOCR
 
 Find the best ocr/htr model that works on an entire images leveraging reformers.
 This is a good starting point https://portal.vision.cognitive.azure.com/demo/extract-text-from-images. I would like to find something open source though, I should also look at [florance](https://arxiv.org/pdf/2111.11432.pdf) or other open source alternatives.
 
-Then after I get the results for every images I can fine-tune a custom llm such as Lama 2 in the smallest configuration and finetune it for this task. Then connect it to a vector database to look up the species name and possibly also to internet to get informations that might be relevants. Also find a good prompt template to get the informations that are needed.
-
-- PaddleOCR
-
+Then after I get the results for every images I can fine-tune a custom llm such as Lama 2 in the smallest configuration and finetune it for this task. Then connect it to a vector database to look up the species name and possibly also to internet to get informations that might be relevants. Also find a good prompt template to get the informations that are needed. You can also do something like KNN maybe to get the closer words to your prediction.
 
 # Piano per il progetto
 
