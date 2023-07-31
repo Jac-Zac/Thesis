@@ -141,3 +141,18 @@ Yes, it's possible to fine-tune Donut's visual question answering capabilities o
 Keep in mind that modifying Donut's architecture or training procedure requires a good understanding of deep learning and natural language processing concepts. It's essential to have experience with PyTorch or another deep learning framework, as well as familiarity with transformer-based architectures like BERT and ResNet.
 
 Additionally, consider the ethical implications of giving Donut access to the internet and allowing it to provide open-ended responses. Ensure that the model is designed with safeguards to prevent misuse or abuse, such as filtering profanity or hate speech, and that users are aware of the potential risks associated with interacting with AI systems.
+
+
+### TODO
+
+- Take a look at this: ```https://huggingface.co/docs/transformers/transformers_agents```
+
+- do something like this https://www.youtube.com/watch?v=71EOM5__vkI and use ocr
+
+- Take a look at [Florence](https://arxiv.org/pdf/2111.11432.pdf)
+
+- Interesting things: https://medium.com/@surve790_52343/transformer-for-ocr-donut-trocr-1a138e9f2cb9
+
+- Maybe use syndog for your custom dataset and tell it how to read and then you can use langchain
+
+- Langchain + LLM + OCR or Trocr like I wanted + lookup on data + internet
