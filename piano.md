@@ -2,6 +2,8 @@
 
 ### This is what I was thinking to do https://huggingface.co/spaces/ajitrajasekharan/Image-Text-Detection to recognize text
 
+- This works: `https://huggingface.co/spaces/deepdoctection/deepdoctection`
+
 - Try paddleOCR
 
 Find the best ocr/htr model that works on an entire images leveraging reformers.
