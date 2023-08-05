@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/opt/homebrew/bin/streamlit run
 import os
 
 import streamlit as st
@@ -79,9 +79,9 @@ Experimental OCR-free Document Understanding Vision Transformer, fine-tuned with
 with st.sidebar:
     information = st.radio(
         "Choose one predictor:",
-        ("Low Res (1200 * 900) 5 epochs", "Mid res (1600 * 1200) 10 epochs", "Mid res (1600 * 1200) 14 epochs"),
+        ("Low Res (1200 * 900) 5 epochs", "Mid res (1600 * 1200) 10 epochs", "Mid res (1600 * 1200) 14 epochs", "Mid res new 0 epoch")
     )
-    image_choice = st.selectbox("Pick one 📑", ["1", "2", "3"], index=0)
+    image_choice = st.selectbox("Pick one 📑", ["1", "2", "3","4"], index=0)
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
 st.text(
@@ -147,6 +147,18 @@ if st.button("Parse sample! 🐍"):
             pretrained_model = VisionEncoderDecoderModel.from_pretrained(
                 "Jac-Zac/thesis_test_donut",
                 revision="ba396d4b3d39a4eaf7c8d4919b384ebcf6f0360f",
+                # use_auth_token=os.environ["TOKEN"],
+            )
+
+        elif information == "Mid res new 0 epoch":
+            processor = DonutProcessor.from_pretrained(
+                "Jac-Zac/thesis_test_donut",
+                #revision="4d64fa9a156908aa3df0e0e39463d401528a15c9",
+                # use_auth_token=os.environ["TOKEN"],
+            )
+            pretrained_model = VisionEncoderDecoderModel.from_pretrained(
+                "Jac-Zac/thesis_test_donut",
+                #revision="4d64fa9a156908aa3df0e0e39463d401528a15c9",
                 # use_auth_token=os.environ["TOKEN"],
             )
 
