@@ -71,4 +71,6 @@ _To improve the performance of your model, you can also consider data augmentati
 
 #### Future thing's to do:
 
+- Command I used to extract sudo find . -type f -exec mv -f {} ../full_images \;
+
 - Build a pipline and a gradio app to shere it. You can take inspiration from [this](https://huggingface.co/spaces/laverdes/donut-web-space/blob/main/app.py)
