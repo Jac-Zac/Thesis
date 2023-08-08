@@ -19,6 +19,8 @@ from PIL import Image
 from PIL import ImageOps
 from pytesseract import image_to_string
 
+# How to use PALM: https://www.youtube.com/watch?v=orPwLibLqm4
+
 def preprocess_image(image, size):
     image = image.resize(size)
     image = ImageOps.exif_transpose(image)

@@ -1,76 +1,64 @@
 # HTR on biological artifacts labels
 
-### Most Relevant material to read
+## Summary of my work 📝
 
-<!-- ### [`MUST READ by the teacher`](https://direct.mit.edu/dint/article/4/2/320/109837/The-Specimen-Data-Refinery-A-Canonical-Workflow) -->
+#### Pipline approach
+
+- Firstly I started to take a look at how to subdivide the recognition with a pipeline. A template of the idea of my pipline that I made after can be [in this streamlit app](streamlit_test/herbarium.py)
+
+-
+
+#### End to end approach
+> This is the main approach I have explored for now since it required less time to get running (and also I have an interested in Multimodal models)
+
+##### Document Understanding for my problem
+
+- The main idea is to use a model that can do document understanding and make it suitable for our use case.
+
+Btw I also though of training 1 or more models from scratch, which considering the "relatively small amount of data and compute" can't be something like a tranformer but should be something with bigger implicit biases, to facilitate the training since in general things like CNN for example have better accuracy for small dataset because of the intrinsic transational invariance bias  (with max pooling) and the fact that they have local dipendencyes, which is something that more general ViT do not have. Also in our case for the Donut model the encoder is a Swin Transformer which ideally would make sense to work better then a standard ViT because of the fact that it allows to attentd also inside the patches (this is a general explainantion of why I think it is a good idea). Then the bart model inside donut helps for the NER.
+
+- I though about trying to investigate into the model firstly by taking a look at the failure cases [hear](link) and in the future also investigate the attentoin heatmap perhaps
+
+##### What I have done as of know
+
+Fine tuned some version of the base Donut model that can be found on hugginface by adding some new tokens and a task token (everything aoubt it can be found in the Donut finetuning notebook that I modified from the original one provided on hugginface). And I did the finetning on around 1.5k images with train, validation and test split obviusly taking results with weights and biases. Though I plan to do it better and track more metric and also do some hyperparameters search to find the best ones. To do that I downscaled the images to fit into the GPU I had available in Kaggle though increasing the resolution a bit seemd to give better resutls this is why in the final training I'd ideally work with images of at least around 2400 x 1800 which is still a significant dowscaled version of the original images which can vary from 2 or 4 times this resolution.
+
+##### Future ideas
+
+- Perhaps also have a mixture of models I have to study more on other things also such as soft mixture of expert (even though this is what you do when you are out of idea ... GPT4 ...)
+
+- Perhaps we can connect it to a vector database or do some similarty search on the species names to see if they match the ones provided for possibel species. (To see in the future)
+
+### Papers about the HTR process that might be helpful
 
 - [Convolve Attend and Spell paper](https://priba.github.io/assets/publi/conf/2018_GCPR_LKang.pdf)
 
+- [Handwriting Recognition of Historical Documents with few labeled dat](https://arxiv.org/pdf/1811.07768v1.pdf)
+
 - [Pay Attention to What You Read paper](https://arxiv.org/abs/2005.13044)
 
-- [Comparison of Open-Source Libraries paper](https://teklia.com/publications/DAS2022_HUMU.pdf)
-
 - [HTR-Flor paper](https://ieeexplore.ieee.org/document/9266005)
-
-- [Handwriting Recognition of Historical Documents with few labeled dat](https://arxiv.org/pdf/1811.07768v1.pdf)
-    > READ dataset ofline HTR
 
     > [code](https://github.com/0x454447415244/HandwritingRecognitionSystem)
 
 - Potentially ScrabbleGAN to have more data
 
-- Connectionist Temporal Classification (CTC)
-    > CTC is a type of neural network architecture that can be used to learn mappings between input (images for example) sequences and output sequences (labels). In speech recognition, for example, the input sequence is an audio signal, and the output sequence is a sequence of words that the speaker is saying.
 
-    > Beam search decoding
+### Other resources
 
-#### TODO:
-> Ask chatGPT to write a better paper for you
+[Donut really good](https://huggingface.co/docs/transformers/main/en/model_doc/donut)
+
+Interesting OCR/HTR. [I have to watch](https://www.youtube.com/watch?v=8VLkaf_hGdQ)
+
+
+#### TODO for me:
 
 - [ ] Format the repository
-- Take a look at [this facebook github repo](https://github.com/facebookresearch/SparseConvNet)
-- [X] Re reed Attention is all you need again
-- [ ] Take inspiration from [this](https://github.com/AlbertoPresta/Thesis)
-- [ ] ViT pytorch implementation [hear](https://github.com/lucidrains/vit-pytorch)
 - [ ] Read [this](https://nanonets.com/blog/handwritten-character-recognition/) article for information, interesting part start from `Scan, Attend and Read`
 - [ ] Read [this](https://paperswithcode.com/task/handwriting-recognition) paper
 - [ ] [`The Illustrated Transformer`](https://jalammar.github.io/illustrated-transformer/)
-
 - [ ] [`Seq2seq with attention`](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
-
-- [X] Read the paper they gave me on CV (Computer Vision)
-
-#### Possible things to do
-
-- Transfer-learning from previous work
-- Look at the [visual transformer](https://www.youtube.com/watch?v=TrdevFK_am4)
-- Distillation in ViTs [hear](https://arxiv.org/abs/2012.12877) but not really that interested for know
-- [Paper summary on visual transformer](https://arxiv.org/abs/2012.12556)
-
-- [Small ViT](https://arxiv.org/abs/2106.10270)
 
 #### Important link
 
 Also keep in mind that combining multiple predictors can be a very powerful technique as well [see](https://dl.gi.de/handle/20.500.12116/16993)
-
-### Things I have to do
-
-_To improve the performance of your model, you can also consider data augmentation techniques, such as adding noise, rotation, or scaling to your labeled examples, to increase the diversity of your dataset and make the model more robust._
-
-### Other resources:
-
-- [Multidimensional Recurrent Layers needed ?](https://ieeexplore.ieee.org/document/8269951)
-
-- I have to take a look at the outliers in the dataset. You can simply run the model on the entire dataset and see the wrong predictions to take a look at those and perhaps exclude them for the next training.
-
-- We really need to have a clean dataset for the model evaluation
-
-- Also using the median for example gives a way better score which should tell us a lot
-
-- Also high res images seem to give better result but do not use early stopping I still improvement at the 10k example steps and after
-
-#### Future thing's to do:
-
-- Command I used to extract sudo find . -type f -exec mv -f {} ../full_images \;
-
-- Build a pipline and a gradio app to shere it. You can take inspiration from [this](https://huggingface.co/spaces/laverdes/donut-web-space/blob/main/app.py)
