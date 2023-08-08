@@ -21,9 +21,13 @@ Btw I also though of training 1 or more models from scratch, which considering t
 
 ##### What I have done as of know
 
+Weights and biases [draft](https://api.wandb.ai/links/jac-zac/3uf34i1s)
+
 Fine tuned some version of the base Donut model that can be found on hugginface by adding some new tokens and a task token (everything aoubt it can be found in the Donut finetuning notebook that I modified from the original one provided on hugginface). And I did the finetning on around 1.5k images with train, validation and test split obviusly taking results with weights and biases. Though I plan to do it better and track more metric and also do some hyperparameters search to find the best ones. To do that I downscaled the images to fit into the GPU I had available in Kaggle though increasing the resolution a bit seemd to give better resutls this is why in the final training I'd ideally work with images of at least around 2400 x 1800 which is still a significant dowscaled version of the original images which can vary from 2 or 4 times this resolution.
 
 ##### Future ideas
+
+- I'll create a new huggingface directory and start to do some real test with the full dataset
 
 - Perhaps also have a mixture of models I have to study more on other things also such as soft mixture of expert (even though this is what you do when you are out of idea ... GPT4 ...)
 
