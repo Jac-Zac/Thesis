@@ -17,7 +17,7 @@
 
 Btw I also though of training 1 or more models from scratch, which considering the "relatively small amount of data and compute" can't be something like a tranformer but should be something with bigger implicit biases, to facilitate the training since in general things like CNN for example have better accuracy for small dataset because of the intrinsic transational invariance bias  (with max pooling) and the fact that they have local dipendencyes, which is something that more general ViT do not have. Also in our case for the Donut model the encoder is a Swin Transformer which ideally would make sense to work better then a standard ViT because of the fact that it allows to attentd also inside the patches (this is a general explainantion of why I think it is a good idea). Then the bart model inside donut helps for the NER.
 
-- I though about trying to investigate into the model firstly by taking a look at the failure cases [hear](link) and in the future also investigate the attentoin heatmap perhaps
+- I though about trying to investigate into the model firstly by taking a look at the failure cases [hear](link) and in the future also investigate the attentoin heatmap perhaps. Look at [this](https://github.com/clovaai/donut/issues/45)
 
 ##### What I have done as of know
 

@@ -43,13 +43,13 @@ def extract_information(ocr_text):
     OCR TEXT: {ocr_text}
 
     Please extract the following information from the OCR text:
-    1. Species Name (put the name of the spieces in the correct standard):
+    1. Species Name (put the name of the species in the correct standard):
     2. Author:
     3. Date (format the date in a standard way):
     4. Location:
     5. Altitude:
 
-    Respond only with the json output.
+    Respond only with the JSON output.
     JSON OUTPUT:
     """
 
