@@ -1,4 +1,4 @@
-# HTR on biological artifacts labels
+# HTR on biological artifacts labels 🌱
 
 ## Summary of my work 📝
 
@@ -28,7 +28,7 @@ The main idea is to use a model that can do document understanding and make it s
 
 - After a few runs that were uploaded to [this repo](https://huggingface.co/Jac-Zac/thesis_test_donut) I started to look at [failure cases hear](https://github.com/Jac-Zac/Thesis/blob/5bd9f8c58216e776efb6cc57b0b09665bd20a99d/inference/model_evaluation.ipynb). In the future I also want to investigate the cross attention heatmap by modifying [this code](https://github.com/Jac-Zac/Thesis/blob/master/inference/template_for_cross_attention_heatmap_and_bounding_box.ipynb). Refer to [this discussion](https://github.com/clovaai/donut/issues/45) for more info about it.
 
-#### My reasoning
+### My reasoning
 
 I considered training one or more custom models from scratch, taking into account the "relatively small amount of data and compute" available. Instead of using a transformer architecture, I would have opted for an alternative architecture with stronger implicit biases to facilitate training. CNNs generally exhibit better accuracy on small datasets due to their intrinsic biases, such as:
 
@@ -38,7 +38,7 @@ I considered training one or more custom models from scratch, taking into accoun
 
 In our case, the Donut model which has a Swin Transformer as its encoder, should theoretically outperform a standard ViT which only has simple attention across patches. Furthermore, the BART model used as a decoder should aid in Named Entity Recognition (NER)
 
-##### What I have done as of know
+### What I have done as of know
 
 I fine-tuned a version of the base [Donut model available on Hugging Face](https://huggingface.co/docs/transformers/model_doc/donut), by adding new tokens and a task token.
 
@@ -50,7 +50,7 @@ Details about this process can be found in the modified Donut fine-tuning notebo
 
 The initial runs where recorded on Weights and biases and [this is a draft of an initial report](https://api.wandb.ai/links/jac-zac/3uf34i1s)
 
-##### Future ideas
+### Future ideas
 
 - I will create a new Hugging Face directory and begin testing with the full dataset.
 
@@ -72,7 +72,7 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 
 - Potentially generate fake data for training also with possible names; also data augmentation technique.
 
-#### TODO (for myself):
+## TODO (for myself):
 
 - [X] Format the repository
 - [ ] To read [this paper for new model Document Understanding](https://arxiv.org/pdf/2307.02499.pdf)
