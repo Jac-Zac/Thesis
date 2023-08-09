@@ -61,19 +61,19 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 
 - We could potentially connect the model to a vector database or perform similarity searches on species names to check for matches with provided species names (to be explored in the future).
 
+- Potentially generate fake data for training also with possible names. Also data augmentation technique.
+
 ### Papers about the HTR process that might be helpful
 
 - [Convolve Attend and Spell paper](https://priba.github.io/assets/publi/conf/2018_GCPR_LKang.pdf)
 
-- [Handwriting Recognition of Historical Documents with few labeled dat](https://arxiv.org/pdf/1811.07768v1.pdf)
+- [Handwriting Recognition of Historical Documents with few labeled data](https://arxiv.org/pdf/1811.07768v1.pdf)
 
 - [Pay Attention to What You Read paper](https://arxiv.org/abs/2005.13044)
 
 - [HTR-Flor paper](https://ieeexplore.ieee.org/document/9266005)
 
     > [code](https://github.com/0x454447415244/HandwritingRecognitionSystem)
-
-- Potentially generate fake data for training also with possible names; also data augmentation technique.
 
 ## TODO (for myself):
 
