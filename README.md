@@ -5,28 +5,31 @@
 ### Pipeline approach
 
 My original idea was to approach the problem by crating a pipeline constructed of:
-> The template code for my idea can be found [hear](https://github.com/Jac-Zac/Thesis/blob/master/pipline_example/herbarium_app.py) even though some pieces are missing.
 
 - Text detection _(which I do not think should be too hard)_.
 
 - OCR/HTR. We could use many different models, my initial idea was to fine tune [TrOCR](https://arxiv.org/pdf/2109.10282.pdf)
 
-- NER (Name Entity Recognition). Simply use an LLM honestly I think any decent LORA 7b model would pretty much do the job.
+- NER (Name Entity Recognition). Simply use an LLM, honestly I think any decent LORA 7b model would pretty much do the job.
 
 - Compare the species names with the possible ones (maybe we will have a file for it).
+
+> The template code for my idea can be found [here](https://github.com/Jac-Zac/Thesis/blob/master/pipline_example/herbarium_app.py) even though some pieces are missing.
 
 ### End to end approach
 > This is the main approach I have explored as of now, since it required less time to get running.
 
 #### Leveraging advances in Document Understanding for my problem
 
-The main idea is to use a model that can do document understanding and make it suitable for our use case. The reason why both hear and for the OCR I wasn't thinking of developing a model from scratch will be explained later. (Even though I perhaps will explore the idea of custom models in the future).
+The main idea is to use a model that can do document understanding and make it suitable for our use case. The reason why I didn't developed a model from scratch will be explained later. (Even though I perhaps will explore the idea of custom models in the future).
 
-- I look at a few different models for Document Understanding and found [Donut](https://arxiv.org/pdf/2111.15664.pdf)
+- I have looked at a few different models for Document Understanding and found [Donut](https://arxiv.org/pdf/2111.15664.pdf)
 
-- I created a [few notebook](https://github.com/Jac-Zac/Thesis/tree/master/Donut_notebooks) to get the model running on my custom dataste.
+- I have created a [few notebook](https://github.com/Jac-Zac/Thesis/tree/master/Donut_notebooks) to get the model running on my custom dataste.
 
-- After a few runs that were uploaded to [this repo](https://huggingface.co/Jac-Zac/thesis_test_donut) I started to look at [failure cases hear](https://github.com/Jac-Zac/Thesis/blob/5bd9f8c58216e776efb6cc57b0b09665bd20a99d/inference/model_evaluation.ipynb). In the future I also want to investigate the cross attention heatmap by modifying [this code](https://github.com/Jac-Zac/Thesis/blob/master/inference/template_for_cross_attention_heatmap_and_bounding_box.ipynb). Refer to [this discussion](https://github.com/clovaai/donut/issues/45) for more info about it.
+- After a few runs that were uploaded to [this repo](https://huggingface.co/Jac-Zac/thesis_test_donut).
+
+- I have also started looking at [failure cases here](https://github.com/Jac-Zac/Thesis/blob/5bd9f8c58216e776efb6cc57b0b09665bd20a99d/inference/model_evaluation.ipynb). In the future I also want to investigate the cross attention heatmap by modifying [this code](https://github.com/Jac-Zac/Thesis/blob/master/inference/template_for_cross_attention_heatmap_and_bounding_box.ipynb). Refer to [this discussion](https://github.com/clovaai/donut/issues/45) for more info about it.
 
 ### My reasoning
 
