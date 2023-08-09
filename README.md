@@ -45,7 +45,7 @@ In our case, the Donut model which has a Swin Transformer as its encoder, should
 
 I fine-tuned a version of the base [Donut model available on Hugging Face](https://huggingface.co/docs/transformers/model_doc/donut), by adding new tokens and a task token.
 
-Details about this process can be found in the modified Donut fine-tuning notebook, which I adapted from the original one provided on [hear](https://github.com/NielsRogge/Transformers-Tutorials/blob/master/Donut/CORD/Fine_tune_Donut_on_a_custom_dataset_(CORD)_with_PyTorch_Lightning.ipynb)
+Details about this process can be found in the modified Donut fine-tuning notebook, which I adapted from the original one provided on [here](https://github.com/NielsRogge/Transformers-Tutorials/blob/master/Donut/CORD/Fine_tune_Donut_on_a_custom_dataset_(CORD)_with_PyTorch_Lightning.ipynb)
 
 - I fine-tuned the model on approximately 1.5k images, with train, validation, and test splits, and tracked the results using [Weights & Biases](https://wandb.ai)
 - In the future, I plan to track more metrics and perform hyperparameter searches to find the best ones.
