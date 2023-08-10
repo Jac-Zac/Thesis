@@ -21,6 +21,11 @@ from pytesseract import image_to_string
 
 # How to use PALM: https://www.youtube.com/watch?v=orPwLibLqm4
 
+# Avoid rate limit
+# @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
+# def completion_with_backoff(**kwargs):
+#     return openai.ChatCompletion.create(**kwargs)
+
 def preprocess_image(image, size):
     image = image.resize(size)
     image = ImageOps.exif_transpose(image)
