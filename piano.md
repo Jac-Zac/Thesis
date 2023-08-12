@@ -2,8 +2,6 @@
 
 ### This is what I was thinking to do https://huggingface.co/spaces/ajitrajasekharan/Image-Text-Detection to recognize text
 
-- [This works good already just as an example](https://huggingface.co/spaces/deepdoctection/deepdoctection) so I think Object Detection is not a problem.
-
 - OCR/HTR is a problem on the other hand, I can try paddleOCR. Also follow the original idea of Fine-tuning TrOCR or perhaps take a look at:
 
 Have a look at Calamari (https://github.com/Calamari-OCR/calamari) and Kraken (https://github.com/mittagessen/kraken)
@@ -12,33 +10,6 @@ For HTR have a look at https://github.com/omni-us/research-seq2seq-HTR.Also buil
 
 - This is a good starting point https://portal.vision.cognitive.azure.com/demo/extract-text-from-images. I would like to find something open source though, I should also look at [florance](https://arxiv.org/pdf/2111.11432.pdf) or other open source alternatives.
 
-# Piano per il progetto
-
-### Idea generale divisa in step:
-> I seguenti punti verrano giustificati brevemente sotto
-
-1. Concentrarci inizialmente sul tagliare il testo dall'immagine, prima ritagliare solo le labels (anche grossolanamente ma tenendo tutto il testo), poi concentrarci sul fare `line segmentation`, questo non con tecniche di deep learning a meno che non siano tools già presenti. I think I will use something like this for line segmentation: [LayoutLMv3](https://arxiv.org/pdf/2204.08387.pdf). Thought I'd like something else because It cant be used for real products. But this is a replaceable part of the stack
-Text segmentation also can use [MMOCR](https://github.com/open-mmlab/mmocr)
-
-> Se questo primo step è fattibile anche non ottenendo risultati perfetti su tutto il dataset direi che si può continuare e focalizzarsi sugli step successivi
-
-> Se invece questa parte si rivela troppo problematica si può pensare di allenare un modello da zero che invece di prendere linee di testo prenda un'intera immagine, (oppure ci sono potenziali altri modelli su cui dovrei informarmi di più)
-
-2. Usare il base model [TrOCR](https://arxiv.org/pdf/2109.10282.pdf) e vedere che risultati otteniamo.
-
-3. Fare Fine-tuning con i nostri dati e volendo anche altri dataset trovati online per esempio di Erbari.
-
-3. A questo punto vedere di capire meglio come integrare NER (Name Entity Recognition) nel nostro stack. Quello che spero di fare sarebbe riuscire ad rimpiazzare i layer finali di TrOCR e fare transfer learning per il nostro task nello specifico.
-
-### Giustificazioni
-
-1. Sostanzialmente l'idea di estrarre solo la parte rilevante dell' immagine per il riconoscimento dovrebbe dare risultati migliori, forse ho anche visto un articolo in cui facevano la stessa cosa ma comunque è decisamente più sensato che fare una cosa End to End partendo dall'immagine a mio parere, anche se in futuro si potrebbe sempre provare un approccio di questo tipo
-
-2. Usare TrOCR o un architettura similare (ViT [Visual Transform](https://arxiv.org/pdf/2010.11929.pdf)). Per più ragioni:
-    - Migliori performance come si vede in [questo articolo](https://arxiv.org/pdf/2203.11008.pdf) per Historical Documents
-    - (Parere personale) Quello che un encoder-decoder transformer impara è più simile al task successivo di NER e potrebbe inoltre essere meglio incorporato con qualcosa tipo [BERT](https://arxiv.org/pdf/1810.04805.pdf)
-
----
 
 ### Initial plan:
 
@@ -102,8 +73,11 @@ _To improve the performance of your model, you can also consider data augmentati
 - Command I used to extract sudo find . -type f -exec mv -f {} ../full_images \;
 
 
-
 ### TODO
+
+- Work on TPU support on kaggle
+
+- Sweeps in wb
 
 - Take a look at this: ```https://huggingface.co/docs/transformers/transformers_agents```
 
