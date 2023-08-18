@@ -55,6 +55,8 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 
 ### Future ideas
 
+- Train on [Lambda](https://lambdalabs.com/) (probably on an A100 or H100)
+
 - I will create a new Hugging Face directory and begin testing with the full dataset.
 
 - I may consider using a mixture of models and explore other techniques, such as soft mixtures of experts. Or even just have two different approach and do something with it to get better performance.
@@ -78,7 +80,7 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 ## TODO (for myself):
 
 - [X] Format the repository
-- [ ] Fix problems on kaggle
+- [ ] Kaggle train from checkpoint to get the first epoch
 - [ ] To read [this paper for new model Document Understanding](https://arxiv.org/pdf/2307.02499.pdf)
 - [ ] Read [this](https://nanonets.com/blog/handwritten-character-recognition/) article for information, interesting part start from `Scan, Attend and Read`
 - [ ] Read [this](https://paperswithcode.com/task/handwriting-recognition) paper
