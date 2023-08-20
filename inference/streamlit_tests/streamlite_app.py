@@ -151,13 +151,13 @@ if st.button("Parse sample! 🐍"):
 
         elif information == "Mid res new 0 epoch":
             processor = DonutProcessor.from_pretrained(
-                "Jac-Zac/thesis_test_donut",
-                revision="9643c2e3e3ad7c896dbda8b98f101fc712962d5e",
+                "Jac-Zac/thesis_donut",
+                # revision="ad0385e27527eea52bdecbbf5218e7d523e085cf",
                 # use_auth_token=os.environ["TOKEN"],
             )
             pretrained_model = VisionEncoderDecoderModel.from_pretrained(
-                "Jac-Zac/thesis_test_donut",
-                revision="9643c2e3e3ad7c896dbda8b98f101fc712962d5e",
+                "Jac-Zac/thesis_donut",
+                # revision="ad0385e27527eea52bdecbbf5218e7d523e085cf",
                 # use_auth_token=os.environ["TOKEN"],
             )
 
