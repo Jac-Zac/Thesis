@@ -80,6 +80,7 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 ## TODO (for myself):
 
 - [X] Format the repository
+- [ ] Format the csv file better
 - [ ] Kaggle train from checkpoint to get the first epoch
 - [ ] To read [this paper for new model Document Understanding](https://arxiv.org/pdf/2307.02499.pdf)
 - [ ] Read [this](https://nanonets.com/blog/handwritten-character-recognition/) article for information, interesting part start from `Scan, Attend and Read`
