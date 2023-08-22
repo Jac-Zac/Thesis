@@ -80,6 +80,7 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 ## TODO (for myself):
 
 - [X] Format the repository
+- [X] New model first epoch, took a lot of compute but quite good on unseen data
 - [ ] Format the csv file better
 - [ ] Kaggle train from checkpoint to get the first epoch
 - [ ] To read [this paper for new model Document Understanding](https://arxiv.org/pdf/2307.02499.pdf)
