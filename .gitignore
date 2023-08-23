@@ -5,6 +5,7 @@
 **/*DAti_TSB_Stoppari.xlsx
 to_read/
 **/donut_example/data
+**/donut_example/kaggle_finetuning.ipynb
 **/donut_example/Immagini_Esposito
 **/inference/img_resized/*
 **/model_parameters_to_fix/*
