@@ -8,4 +8,4 @@ to_read/
 **/donut_example/Immagini_Esposito
 **/inference/img_resized/*
 **/model_parameters_to_fix/*
-**/Donut_notebooks/kaggle_finetuning.ipynb
+Donut_notebooks/kaggle_finetuning.ipynb
