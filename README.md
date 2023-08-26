@@ -79,6 +79,8 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 
 ## TODO (for myself):
 
+- Big problems with unreliable dataset (needs discussion)
+
 - [X] Format the repository
 - [X] New model first epoch, took a lot of compute but quite good on unseen data
 - [ ] Format the csv file better
