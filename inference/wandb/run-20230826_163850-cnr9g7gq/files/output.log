@@ -1,0 +1,180 @@
+/opt/homebrew/lib/python3.11/site-packages/PIL/TiffImagePlugin.py:866: UserWarning: Truncated File Read
+  warnings.warn(str(msg))
+Mean accuracy: 0.7808265875985416
+Mean accuracy: 0.7808265875985416
+Mean accuracy: 0.7808265875985416
+Mean accuracy: 0.8372093023255813
+Mean accuracy (excluding worst 10): 0.7845787576494717
+Ground Truth: {"Nome_verbatim": "Origanum vulgare subsp. viridulum (Martrin-Donos) Nyman", "Locality": "Nelle selve tra Nocera e Chiunzo. A circa 400 m.", "Elevation": "400", "Day": "", "Month": "10", "Year": "1920"}
+Prediction: {'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Prunella grandiflora (L.) Scholler", "Locality": "Messina", "Elevation": "", "Day": "6", "Month": "11", "Year": "1924"}
+Prediction: {'Nome_verbatim': 'Prunella grandiflora (L.) Moq.', 'Locality': 'Pyr. Or. Capcir, foret de pins vers Boiss. 1700 m', 'Elevation': '1700', 'Day': '12', 'Month': '8', 'Year': '1913'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Cucumis L.", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Asplenium cucumis arvensis (L.) Scop.', 'Locality': '', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Alchemilla impexa Buser", "Locality": "Media Val Camonica occidentale, BS, Paisco, Val di Scala, sentiero su scorrimento d'acqua dalla Malga di Val di Scala al rif. Torsoleto (Staz.2)  1800 m", "Elevation": "1800", "Day": "10", "Month": "7", "Year": "2011"}
+Prediction: {'Nome_verbatim': 'Alchemilla implexa Buser', 'Locality': "M. Piano, Val d'Salandiana a scorimento daxque dalla Malga di Val di Scala al Trifolio, Campover rivinto 46°45° 101437° Campo di Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo Campo dimbose (Bruzo)", 'Elevation': '', 'Day': '10', 'Month': '7', 'Year': '2011'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Salix glauca L.", "Locality": "Norvegia bor.", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Salix glauca var. nigrescens (L.) Rouy', 'Locality': 'Flakstad, Lofoten. Norveg. boreal.', 'Elevation': '', 'Day': '17', 'Month': '6', 'Year': '1889'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Populus nigra L.", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Populus italica Mill.', 'Locality': 'Rhône, Arnas', 'Elevation': '', 'Day': '', 'Month': '8', 'Year': '1891'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Campanula L.", "Locality": "Furore", "Elevation": "", "Day": "20", "Month": "4", "Year": "1912"}
+Prediction: {'Nome_verbatim': 'Campanula fragilis Guss.', 'Locality': 'Muri e Rive sotto Pozzano', 'Elevation': '', 'Day': '18', 'Month': '4', 'Year': '1909'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Juncus capitatus Weigel", "Locality": "Nei seminati tra Sommariva Bosco e Ceresole d'Alba, Prov. di Cuneo", "Elevation": "", "Day": "4", "Month": "7", "Year": "1905"}
+Prediction: {'Nome_verbatim': 'Juncus capillus Weigel', 'Locality': 'Etruria. Insula Caparia (Iode Capraia), locis hieme humettibus, alt. 50-300 m., solo siliceo, cum microphytis, saepe cum J. pygmaed', 'Elevation': '650', 'Day': '4', 'Month': '9', 'Year': '1908'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Cycas L.", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Euphorbia L.', 'Locality': '', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Cupressus L.", "Locality": "H.B.N.", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Cappressus glauca L.', 'Locality': 'Lauria', 'Elevation': '', 'Day': '24', 'Month': '6', 'Year': '1896'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Cupressus L.", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Cupressus tourneforteuca Ten.', 'Locality': '', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Prunella grandiflora (L.) Scholler", "Locality": "Messina", "Elevation": "", "Day": "6", "Month": "11", "Year": "1924"}
+Prediction: {'Nome_verbatim': 'Prunella grandiflora Scop.', 'Locality': 'Val Casterino di Tenda, a 1550 m. Alp. Mar. Liguria', 'Elevation': '1550', 'Day': '14', 'Month': '8', 'Year': '1897'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Cedrus libani A. Rich.", "Locality": "Serra San Bruno", "Elevation": "", "Day": "", "Month": "3", "Year": "1917"}
+Prediction: {'Nome_verbatim': 'Cedras libani (Barbás) Link', 'Locality': 'Culta, Cassiti calcatella tra la squareme a Bruno', 'Elevation': '', 'Day': '', 'Month': '3', 'Year': '1917'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Orchis italica Poir.", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Orchis italica Poir.', 'Locality': 'Valle Cannella della Castello', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Poa trivialis L.", "Locality": "Deserto", "Elevation": "", "Day": "", "Month": "6", "Year": "1913"}
+Prediction: {'Nome_verbatim': 'Poa trivialis stricta (L.) All.', 'Locality': 'Selve a Tore di Stellante', 'Elevation': '', 'Day': '7', 'Month': '6', 'Year': '1908'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Centaurea seusana Chaix", "Locality": "M.t Leuse prope Vapinco, Gallia in dejectus herbosas, 1700 m", "Elevation": "1700", "Day": "19", "Month": "6", "Year": "1906"}
+Prediction: {'Nome_verbatim': 'Centaurea fuscana Chaix', 'Locality': 'Toglia caglia e super. Bresenata ed sopra di Scratte, limerio olimoni, loco dau, M. Leuse prope Vergineco. Gallia, in decpecibus herbosas, alt. 1100 m.', 'Elevation': '1100', 'Day': '17', 'Month': '6', 'Year': '1906'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Pyrethrum allionii Rouy", "Locality": ", Czersk", "Elevation": "", "Day": "", "Month": "", "Year": "1906"}
+Prediction: {'Nome_verbatim': 'Saxichorium album M. Bieb.', 'Locality': 'Flora von Nord- und Ost-Deltschland', 'Elevation': '', 'Day': '', 'Month': '', 'Year': '1906'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Pleurostachys tenuiflora Brongn.", "Locality": "", "Elevation": "", "Day": "", "Month": "11", "Year": "1817"}
+Prediction: {'Nome_verbatim': 'Scirpus latifolius Bertol.', 'Locality': 'A. C. Anavo, 2 M. Badini', 'Elevation': '2', 'Day': '2', 'Month': '9', 'Year': '1905'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Scleria gaertneri Raddi", "Locality": "", "Elevation": "", "Day": "", "Month": "11", "Year": "1817"}
+Prediction: {'Nome_verbatim': 'Seleria gaertnaria Raddi', 'Locality': 'Agertropi, Ribaldin pr. Confi-Wagnes', 'Elevation': '', 'Day': '2', 'Month': '9', 'Year': '1905'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Saxifraga L.", "Locality": "Morrone", "Elevation": "", "Day": "", "Month": "6", "Year": "1909"}
+Prediction: {'Nome_verbatim': 'Saxifraga rotscendens var. parnassica Boiss.', 'Locality': 'M. Amaro a Majella', 'Elevation': '', 'Day': '', 'Month': '8', 'Year': '1909'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Lonicera implexa Aiton", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Lonicera implexa Aiton', 'Locality': ', Flora der si arvensina alle formalongolata (Guss)', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Thalictrum rugosum Aiton", "Locality": "H.B.N.", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Thalictrum linguorum Arv.-Touv.', 'Locality': ', Fusuta del M. Specisum', 'Elevation': '', 'Day': '16', 'Month': '5', 'Year': '1897'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Pteris vittata L.", "Locality": "Valle di Cetara", "Elevation": "50", "Day": "24", "Month": "9", "Year": "1916"}
+Prediction: {'Nome_verbatim': 'Pteris vittata L.', 'Locality': 'Valle di Cetara con piùgiola Rupi di Stellante e metà salendo verso 70 m.', 'Elevation': '70', 'Day': '24', 'Month': '6', 'Year': '1910'}
+Score: 0
+Ground Truth: {"Nome_verbatim": "Euphorbia pinea L.", "Locality": "Ravello", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Silene L.', 'Locality': 'Ravello, Pervaticiano', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.03703703703703709
+Ground Truth: {"Nome_verbatim": "Centaurea marschalliana Spreng.", "Locality": "Kjew Puschtscha in pinetis", "Elevation": "", "Day": "27", "Month": "6", "Year": "1911"}
+Prediction: {'Nome_verbatim': 'Centaurea marschalliana var. vulgaris (L.) W. D. J. Koch', 'Locality': 'Rossija S-W. Kijew. Puschtscha in pinetis spa. 11str.', 'Elevation': '11', 'Day': '11', 'Month': '5', 'Year': '1897'}
+Score: 0.05797101449275366
+Ground Truth: {"Nome_verbatim": "Sesleria juncifolia subsp. juncifolia Suffren", "Locality": "Cave Monte Rombolo, Campiglia Marittima (LI), Italia su ambiente a mosaico su substrato al limitare di una cava abbandonata  LAT. 43.08027\u00b0  LONG. 10.59632\u00b0  ALT. 280 m", "Elevation": "280", "Day": "30", "Month": "3", "Year": "2017"}
+Prediction: {'Elevation': '280', 'Day': '30', 'Month': '3', 'Year': '2017'}
+Score: 0.06113537117903933
+Ground Truth: {"Nome_verbatim": "Ehrharta panicea Sm.", "Locality": "Portici", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Ehrhaeta panjeca (L.) Hill', 'Locality': 'Panium, Leflorum', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.06896551724137934
+Ground Truth: {"Nome_verbatim": "Gossypium herbaceum L.", "Locality": "Coltivato", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Sideritis L.', 'Locality': 'In la la lacacum', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.09090909090909094
+Ground Truth: {"Nome_verbatim": "Jaumea carnosa (Less.) A. Gray", "Locality": "Collected near Benicia", "Elevation": "", "Day": "13", "Month": "7", "Year": "1906"}
+Prediction: {'Nome_verbatim': 'Galium lucidum L.', 'Locality': 'Gaumea carnosa (Lessa) Gray', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.109375
+Ground Truth: {"Nome_verbatim": "Asperula L.", "Locality": ", Erbosi presso il lago Fusaro, prov. di Napoli", "Elevation": "", "Day": "", "Month": "6", "Year": "1907"}
+Prediction: {'Nome_verbatim': 'Hordeum maritimum var. pubescens (Guss.) Fiori', 'Locality': 'Erbosi presso il lago Fusaro', 'Elevation': '', 'Day': '', 'Month': '6', 'Year': '1907'}
+Score: 0.11940298507462688
+Ground Truth: {"Nome_verbatim": "Campanula turbinata Schott, Nyman & Kotschy", "Locality": "Czersk", "Elevation": "", "Day": "", "Month": "", "Year": "1905"}
+Prediction: {'Nome_verbatim': 'Campanula turbinata Schott', 'Locality': 'Flora von Nord-U. Ost-Deautschland', 'Elevation': '', 'Day': '', 'Month': '', 'Year': '1905'}
+Score: 0.125
+Ground Truth: {"Nome_verbatim": "Piper nigrum L.", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Piper nigheria L.', 'Locality': 'S. Peracc', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.125
+Ground Truth: {"Nome_verbatim": "Saxifraga adscendens var. parnassica (Boiss. & Heldr.) Hal\u00e1csy", "Locality": "Piano di Tavola Rotonda, Majella, 2500 m. c. s. calc.", "Elevation": "2500", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Saxifraga L.', 'Locality': 'M. Amaro. Majella', 'Elevation': '', 'Day': '', 'Month': '7', 'Year': '1909'}
+Score: 0.139344262295082
+Ground Truth: {"Nome_verbatim": "Aspidium lonchitis (L.) Sw.", "Locality": "Bayr. Allgau: Fellhorn bei Oberstdorf", "Elevation": "", "Day": "27", "Month": "7", "Year": "1909"}
+Prediction: {'Nome_verbatim': 'Aepidea trachibi var. hastata (L.) Briq.', 'Locality': 'Bagni Alpi', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.14473684210526316
+Ground Truth: {"Nome_verbatim": "Scutellaria incana Spreng.", "Locality": "Woodlands near Biltmore", "Elevation": "", "Day": "30", "Month": "7", "Year": "1904"}
+Prediction: {'Nome_verbatim': 'Medicago incana (L.) All.', 'Locality': '', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.14754098360655743
+Ground Truth: {"Nome_verbatim": "Hieracium alpinum L.", "Locality": "label: Ex herbar. Dr. Behrendsen] Flora von Schleisen n. 723, Riesengebirge: Elbwiese", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Hieracium alpinum var. faloreum Wimm.', 'Locality': ', H. Frilzei F. Schultz', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.14953271028037385
+Ground Truth: {"Nome_verbatim": "Allium carinatum var. capsuliferum (W. D. J. Koch) W. D. J. Koch", "Locality": "In mte Vojnik", "Elevation": "", "Day": "", "Month": "7", "Year": "1904"}
+Prediction: {'Nome_verbatim': 'Allium carinatum L.', 'Locality': 'Capsulferria (Waldst. & Kit.)', 'Elevation': '', 'Day': '', 'Month': '7', 'Year': '1907'}
+Score: 0.15116279069767447
+Ground Truth: {"Nome_verbatim": "Artemisia annua L.", "Locality": "Hosp. in Sud-Bayern bei Auszburg", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Artemisia asanae var. lloydia Benth.', 'Locality': 'Prope ins. Pisch. Bagna bei Angabsery', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.15384615384615385
+Ground Truth: {"Nome_verbatim": "Knautia arvensis (L.) Coult.", "Locality": "Ingresso Pozzo Walter, Monte Calvi, Campiglia Marittima (LI) Italia, su discarica di materiale di cava incoerente. LAT. 43,08673\u00b0  LONG. 10.61127\u00b0  ALT 300 m", "Elevation": "300", "Day": "16", "Month": "3", "Year": "2017"}
+Prediction: {'Nome_verbatim': 'Knautia arvensis (L.) Crantz', 'Locality': 'Incol.', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.154228855721393
+Ground Truth: {"Nome_verbatim": "Iso\u00ebtes setacea Lam.", "Locality": "Portiragne (H\u00e8rault.), Mares du plateau de Roquehaute, pr\u00e8s de Vias", "Elevation": "", "Day": "8", "Month": "5", "Year": "1898"}
+Prediction: {'Nome_verbatim': 'Isoëtes setacea Desf.'}
+Score: 0.173469387755102
+Ground Truth: {"Nome_verbatim": "Schoenus nigricans L.", "Locality": "Hurtebise pr\u00e8s Angoul\u00eame", "Elevation": "", "Day": "9", "Month": "5", "Year": "1894"}
+Prediction: {'Nome_verbatim': 'Alyssum agricum L.', 'Locality': '', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.1785714285714286
+Ground Truth: {"Nome_verbatim": "Alchemilla glabra Neygenf.", "Locality": "Media Val Camonica occidentale, BS, Paisco, Val di Scala, zona umida presso la Malga di Scala bassa 1770 m", "Elevation": "1770", "Day": "10", "Month": "7", "Year": "2011"}
+Prediction: {'Nome_verbatim': 'Alchemilla glabra Neygenf.'}
+Score: 0.18120805369127513
+Ground Truth: {"Nome_verbatim": "Centaurea jacea L. x Centaurea macroptilon Borb\u00e1s", "Locality": "Sochau", "Elevation": "", "Day": "", "Month": "9", "Year": "1906"}
+Prediction: {'Nome_verbatim': 'Centaurea pressmannii Hayek', 'Locality': ', S Schau: Ver v.', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.1875
+Ground Truth: {"Nome_verbatim": "Zannichellia palustris subsp. pedicellata (Wahlenb. & Ros\u00e9n) Hook. f.", "Locality": "Angoul\u00eame", "Elevation": "", "Day": "31", "Month": "10", "Year": "1897"}
+Prediction: {'Nome_verbatim': 'Zonnichellis pedicellata (Waldst. & Kit.) Heyön', 'Locality': 'Carrières de granier (Cavax cranpissante)', 'Elevation': '', 'Day': '31', 'Month': '10', 'Year': '1897'}
+Score: 0.19780219780219777
+Ground Truth: {"Nome_verbatim": "Straussiella purpurea (Bunge) Hausskn.", "Locality": "Iran, in distr.", "Elevation": "", "Day": "29", "Month": "8", "Year": "1902"}
+Prediction: {'Nome_verbatim': 'Brassica phypina var. lucicas (Repp.) Rouy', 'Locality': 'In distr. Dsupaelach', 'Elevation': '', 'Day': '29', 'Month': '7', 'Year': '1909'}
+Score: 0.19999999999999996
+Ground Truth: {"Nome_verbatim": "Seseli L.", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Centaurea L.', 'Locality': '', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.19999999999999996
+Ground Truth: {"Nome_verbatim": "Quercus pyrenaica Willd.", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Polygonum L.', 'Locality': '', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.19999999999999996
+Ground Truth: {"Nome_verbatim": "Ferula longipes Coss. ex Bonn. & Maury", "Locality": "Sud Oranais; A\u00efn S\u00e9fra", "Elevation": "", "Day": "", "Month": "5", "Year": "1922"}
+Prediction: {'Nome_verbatim': 'Centaurea L.', 'Locality': 'Termini Angopio verso Sud Oranais; Aïn Séfra', 'Elevation': '', 'Day': '', 'Month': '5', 'Year': '1922'}
+Score: 0.2028985507246377
+Ground Truth: {"Nome_verbatim": "Artemisia dracunculoides Pursh", "Locality": "Malgrate. P. coltivata", "Elevation": "", "Day": "29", "Month": "6", "Year": "1896"}
+Prediction: {'Nome_verbatim': 'Senecio majosa L.', 'Locality': ', Sila di Napoli, Tramonti', 'Elevation': '', 'Day': '', 'Month': '6', 'Year': '1909'}
+Score: 0.203125
+Ground Truth: {"Nome_verbatim": "Allium angulosum L.", "Locality": "Russia: Gouv. Moscow, Distr. de Serpukhov pr\u00e8s du village Louschki", "Elevation": "", "Day": "16", "Month": "6", "Year": "1901"}
+Prediction: {'Nome_verbatim': 'Allium angulosum L.', 'Locality': '', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.20618556701030932
+Ground Truth: {"Nome_verbatim": "Orobanche epithymum DC.", "Locality": "Elba", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Orobanche epithymum Arv.-Touv.', 'Locality': 'Tep', 'Elevation': '', 'Day': '19', 'Month': '7', 'Year': '1861'}
+Score: 0.2068965517241379
+Ground Truth: {"Nome_verbatim": "Cycas L.", "Locality": "", "Elevation": "", "Day": "", "Month": "", "Year": ""}
+Prediction: {'Nome_verbatim': 'Geranium L.', 'Locality': '', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.2222222222222222
+Ground Truth: {"Nome_verbatim": "Alchemilla lucida Buser", "Locality": "1\u00b0 ampia radura da Maceglia verso Mandromini, (PT), m 1450 s.l.m.", "Elevation": "1450", "Day": "1", "Month": "8", "Year": "2016"}
+Prediction: {'Nome_verbatim': 'Alchemilla lucida Buser'}
+Score: 0.23076923076923073
+Ground Truth: {"Nome_verbatim": "Crocus nudiflorus Sm.", "Locality": "Dans les pr\u00e9s et les bois des terrains granitiques, \u00e0 1200 m. environ, pr\u00e9s d'Angl\u00e8s-du-Tarn (Tarn-France)", "Elevation": "", "Day": "6", "Month": "10", "Year": "1857"}
+Prediction: {'Nome_verbatim': 'Crocus supplore var. multifidus (Ten.) Fiori', 'Locality': ", Dans les pascuis et bois des terrains rupitiques d'1200 m.", 'Elevation': '1200', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.237410071942446
+Ground Truth: {"Nome_verbatim": "Moricandia DC.", "Locality": "Tra Scalacoeli  e Campana", "Elevation": "", "Day": "3", "Month": "6", "Year": "1918"}
+Prediction: {'Nome_verbatim': 'Tra scala louche L.', 'Locality': 'Campana. Sila', 'Elevation': '', 'Day': '29', 'Month': '6', 'Year': '1918'}
+Score: 0.24
+Ground Truth: {"Nome_verbatim": "Ranunculus L.", "Locality": ", Cozzo Pellegrino. Piano di Vincenzo, 1300 m", "Elevation": "1300", "Day": "26", "Month": "6", "Year": "1917"}
+Prediction: {'Nome_verbatim': 'Ranunculus garganicus Ten.', 'Locality': 'Rupi calcaree tra Pino Vincenzo e Dispensa Cozzo Pellegrino. Piano di Vincenzo 1300 m', 'Elevation': '1300', 'Day': '26', 'Month': '6', 'Year': '1917'}
+Score: 0.24
+Ground Truth: {"Nome_verbatim": "Lonicera tatarica L.", "Locality": "Czersk", "Elevation": "", "Day": "", "Month": "", "Year": "1907"}
+Prediction: {'Nome_verbatim': 'Lonicera tartucium splendens (L.) L.', 'Locality': 'Czersk', 'Elevation': '', 'Day': '', 'Month': '', 'Year': ''}
+Score: 0.24242424242424243
+Ground Truth: {"Nome_verbatim": "Thalictrum atropurpureum Jacq.", "Locality": "Magna Sila lungo l'Acquedotto alla Cecita", "Elevation": "1600", "Day": "30", "Month": "5", "Year": "1917"}
+Prediction: {'Nome_verbatim': 'Thalictrum aquilegiifolium var. atropurpurea (Jacq.) Fiori', 'Locality': 'Magna Sila. Tra il bosco Corvo ed il bosco Cecita, 1600 m.', 'Elevation': '1600', 'Day': '30', 'Month': '5', 'Year': '1917'}
