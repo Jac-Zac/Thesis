@@ -77,6 +77,8 @@ _To improve the performance of your model, you can also consider data augmentati
 
 - Work on TPU support on kaggle
 
+- This might be useful: ```https://mindee.github.io/doctr/``` maybe work with it together with Donut
+
 - Sweeps in wb
 
 - Take a look at this: ```https://huggingface.co/docs/transformers/transformers_agents```

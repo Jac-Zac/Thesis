@@ -5,6 +5,7 @@
 ### Pipeline approach
 
 My original idea was to approach the problem by crating a pipeline constructed of:
+> Take a look at [this](https://mindee.github.io/doctr/)
 
 - Text detection _(which I do not think should be too hard)_.
 
