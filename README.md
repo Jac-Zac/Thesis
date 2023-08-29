@@ -81,6 +81,7 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 ## TODO (for myself):
 
 - Big problems with unreliable dataset (needs discussion)
+- I have to take a look at the shape the images are passed to the mnodel
 
 - [X] Format the repository
 - [X] New model first epoch, took a lot of compute but quite good on unseen data

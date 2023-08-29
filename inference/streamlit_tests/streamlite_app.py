@@ -95,7 +95,8 @@ if uploaded_file is not None:
     if information == "Low Res (1200 * 900) 5 epochs":
         image = preprocess_image(image, (1200, 900))
     else:
-        image = preprocess_image(image, (1600, 1200))
+        # image = preprocess_image(image, (1600, 1200))
+        image = preprocess_image(image, (1200, 1600))
 else:
     image_choice_map = {
         '1': 'examples/00021.jpg',
