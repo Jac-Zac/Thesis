@@ -81,10 +81,12 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 ## TODO (for myself):
 
 - Big problems with unreliable dataset (needs discussion)
-- I have to take a look at the shape the images are passed to the mnodel
+- I have to take a look at the shape the images are passed to the model
 
 - [X] Format the repository
 - [X] New model first epoch, took a lot of compute but quite good on unseen data
+- [ ] Look into the model auto alleging to the width automatically
+- [ ] The model is already ready for multiple ground truth though we should add them to the csv file if we want to do that.
 - [ ] Format the csv file better
 - [ ] Kaggle train from checkpoint to get the first epoch
 - [ ] To read [this paper for new model Document Understanding](https://arxiv.org/pdf/2307.02499.pdf)
