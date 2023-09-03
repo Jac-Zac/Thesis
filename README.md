@@ -85,6 +85,7 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 
 - [X] Format the repository
 - [X] New model first epoch, took a lot of compute but quite good on unseen data
+- [ ] Understand why some images get no prediction and when cropped even slightly they get the exact prediction. Maybe look into data augmentation.
 - [ ] Look into the model auto alleging to the width automatically
 - [ ] The model is already ready for multiple ground truth though we should add them to the csv file if we want to do that.
 - [ ] Format the csv file better
