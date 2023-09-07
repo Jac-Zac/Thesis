@@ -80,6 +80,8 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 
 ## TODO (for myself):
 
+- We will start by working with adding sub-word and word tokens for every species and see the results this will be done in October most likely
+
 - Big problems with unreliable dataset (needs discussion)
 - I have to take a look at the shape the images are passed to the model
 
