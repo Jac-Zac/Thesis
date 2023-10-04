@@ -9,6 +9,7 @@ from transformers import DonutProcessor
 from transformers import VisionEncoderDecoderConfig
 from transformers import VisionEncoderDecoderModel
 
+
 def run_prediction(sample):
     global pretrained_model, processor, task_prompt
     if isinstance(sample, dict):
@@ -78,10 +79,12 @@ Experimental OCR-free Document Understanding Vision Transformer, fine-tuned with
 with st.sidebar:
     information = st.radio(
         "Choose one predictor:",
-        ("Low Res (1200 * 900) 5 epochs", "Mid res (1600 * 1200) 10 epochs", "Mid res (1600 * 1200) 14 epochs", "Mid res new 0 epoch")
+        ("Low Res (1200 * 900) 5 epochs", "Mid res (1600 * 1200) 10 epochs",
+         "Mid res (1600 * 1200) 14 epochs", "Mid res new 0 epoch")
     )
-    image_choice = st.selectbox("Pick one 📑", ["1", "2", "3","4"], index=0)
-    uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
+    image_choice = st.selectbox("Pick one 📑", ["1", "2", "3", "4"], index=0)
+    uploaded_file = st.file_uploader(
+        "Upload an image", type=["jpg", "jpeg", "png"])
 
 st.text(
     f"{information} mode is ON!\nTarget 📑: {image_choice}"
@@ -102,7 +105,7 @@ else:
         '1': 'examples/00021.jpg',
         '2': 'examples/00031.jpg',
         '3': 'examples/00050.jpg',
-     }
+    }
     image = Image.open(image_choice_map[image_choice])
 
 with col1:
