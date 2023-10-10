@@ -5,6 +5,7 @@
 ### Pipeline approach
 
 My original idea was to approach the problem by crating a pipeline constructed of:
+
 > Take a look at [this](https://mindee.github.io/doctr/)
 
 - Text detection _(which I do not think should be too hard)_.
@@ -18,6 +19,7 @@ My original idea was to approach the problem by crating a pipeline constructed o
 > The template code for my idea can be found [here](https://github.com/Jac-Zac/Thesis/blob/master/pipline_example/herbarium_app.py) even though some pieces are missing.
 
 ### End to end approach
+
 > This is the main approach I have explored as of now, since it required less time to get running.
 
 #### Leveraging advances in Document Understanding for my problem
@@ -46,7 +48,7 @@ In our case, the Donut model which has a Swin Transformer as its encoder, should
 
 I fine-tuned a version of the base [Donut model available on Hugging Face](https://huggingface.co/docs/transformers/model_doc/donut), by adding new tokens and a task token.
 
-Details about this process can be found in the modified Donut fine-tuning notebook, which I adapted from the original one provided on [here](https://github.com/NielsRogge/Transformers-Tutorials/blob/master/Donut/CORD/Fine_tune_Donut_on_a_custom_dataset_(CORD)_with_PyTorch_Lightning.ipynb)
+Details about this process can be found in the modified Donut fine-tuning notebook, which I adapted from the original one provided on [here](<https://github.com/NielsRogge/Transformers-Tutorials/blob/master/Donut/CORD/Fine_tune_Donut_on_a_custom_dataset_(CORD)_with_PyTorch_Lightning.ipynb>)
 
 - I fine-tuned the model on approximately 1.5k images, with train, validation, and test splits, and tracked the results using [Weights & Biases](https://wandb.ai)
 - In the future, I plan to track more metrics and perform hyperparameter searches to find the best ones.
@@ -76,7 +78,7 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 
 - [HTR-Flor paper](https://ieeexplore.ieee.org/document/9266005)
 
-    > [code](https://github.com/0x454447415244/HandwritingRecognitionSystem)
+  > [code](https://github.com/0x454447415244/HandwritingRecognitionSystem)
 
 ## TODO (for myself):
 
@@ -85,8 +87,8 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 - Big problems with unreliable dataset (needs discussion)
 - I have to take a look at the shape the images are passed to the model
 
-- [X] Format the repository
-- [X] New model first epoch, took a lot of compute but quite good on unseen data
+- [x] Format the repository
+- [ ] Adding tokens doesn't provide that good of a performance boost
 - [ ] Fix different between validation during training and after training (90 accuracy compared to 80)
 - [ ] Format the csv file better
 - [ ] Kaggle train from checkpoint to get the first epoch
@@ -96,13 +98,14 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 - [ ] Take a look at this again: [`Seq2seq with attention`](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/)
 - [ ] Interesting OCR/HTR. [I have to watch](https://www.youtube.com/watch?v=8VLkaf_hGdQ)
 
-- Also keep in mind that combining multiple predictors can be a very powerful technique as well [see](https://dl.gi.de/handle/20.500.12116/16993)
-
 ### TODO (talk about it):
 
+- _Donut_ If we want to extract different things for different labels then we just need to split them apart as I said at the start identify the text and work only on that, but I mean he didn't want that I think I should talk about that again
+
 - [ ] Understand why some images get no prediction and when cropped even slightly they get the exact prediction.
+
 - [ ] Maybe look into adding data augmentation.
+
 - [ ] The model is already ready for multiple ground truth though we should add them to the csv file if we want to do that.
-- [ ] Decide what to do whit sub-word tokens and how to train future models
+
 - [ ] Also we can perhaps think of going ocr ouput inside of Donut after the encoder to give more context to the decoder.
-- [ ] Evaluate new training and longer fine-tuning

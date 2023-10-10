@@ -10,7 +10,6 @@ For HTR have a look at https://github.com/omni-us/research-seq2seq-HTR.Also buil
 
 - This is a good starting point https://portal.vision.cognitive.azure.com/demo/extract-text-from-images. I would like to find something open source though, I should also look at [florance](https://arxiv.org/pdf/2111.11432.pdf) or other open source alternatives.
 
-
 ### Initial plan:
 
 - Start out by trying [Donut](https://huggingface.co/docs/transformers/main/en/model_doc/donut)
@@ -23,16 +22,15 @@ For HTR have a look at https://github.com/omni-us/research-seq2seq-HTR.Also buil
 
 - Potentially do some LORA fine-tuning or something like that on Donut or just build another model to detect a box around the text we want to use and then use it to cut the images automatically as a second step to make performances better
 
-- I also believe that the accuracy will be pretty low if we look for exact string matching. And as the model gets better we would get to see an emergent jump in performance similarly to what is suggested in the paper: ```https://arxiv.org/pdf/2304.15004.pdf``` Thus I believe we shouldn't evaluate the model only on the exact match but have a more continues  way to evaluate it to get a more realistic accuracy and scaling for the future models. Look at something like (Token Edit Distance)
+- I also believe that the accuracy will be pretty low if we look for exact string matching. And as the model gets better we would get to see an emergent jump in performance similarly to what is suggested in the paper: `https://arxiv.org/pdf/2304.15004.pdf` Thus I believe we shouldn't evaluate the model only on the exact match but have a more continues way to evaluate it to get a more realistic accuracy and scaling for the future models. Look at something like (Token Edit Distance)
 
 - UBIAI https://ubiai.tools/Docs#modelcreation for data annotation
 
 - Read this for segmentation: https://www.researchgate.net/publication/340039970_Objects_Detection_from_Digitized_Herbarium_Specimen_based_on_Improved_YOLO_V3
 
-- Use this dataset: ```herbarium Haussknecht of FSU Jena.``` for further training and use more then YOLO v4
+- Use this dataset: `herbarium Haussknecht of FSU Jena.` for further training and use more then YOLO v4
 
 - For all the predicted words I want to see the attention map to where they point and maybe do some noice visualization
-
 
 #### First test accuracy of 83% on test set if I remember correctly
 
@@ -72,16 +70,13 @@ _To improve the performance of your model, you can also consider data augmentati
 
 - Command I used to extract sudo find . -type f -exec mv -f {} ../full_images \;
 
-
 ### TODO
 
-- Work on TPU support on kaggle
-
-- This might be useful: ```https://mindee.github.io/doctr/``` maybe work with it together with Donut
+- This might be useful: `https://mindee.github.io/doctr/` maybe work with it together with Donut
 
 - Sweeps in wb
 
-- Take a look at this: ```https://huggingface.co/docs/transformers/transformers_agents```
+- Take a look at this: `https://huggingface.co/docs/transformers/transformers_agents`
 
 - do something like this https://www.youtube.com/watch?v=71EOM5__vkI and use ocr
 
