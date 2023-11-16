@@ -5,8 +5,11 @@ from collections import OrderedDict
 from pyexcel_ods3 import save_data
 
 # Load your JSON data
-with open("../output.json") as f:
+with open("../output_clean.json") as f:
     data = json.load(f)
+
+# List of required keys
+required_keys = ["Nome_verbatim", "Locality", "Elevation", "Day", "Month", "Year"]
 
 # Prepare data for ODS
 ods_data = OrderedDict()
@@ -21,4 +24,8 @@ for item in data:
 ods_data["Sheet1"] = sheet_data
 
 # Save data to an ODS file
-save_data("../output.ods", ods_data)
+try:
+    save_data("../output.ods", ods_data)
+except Exception as e:
+    print(f"Error saving data: {e}")
+    raise
