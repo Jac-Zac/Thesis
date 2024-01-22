@@ -100,6 +100,8 @@ The initial runs where recorded on Weights and biases and [this is a draft of an
 
 ### TODO (talk about it):
 
+- Possibly mixture of experts (like gpt or mistral but for vision)
+
 - _Donut_ If we want to extract different things for different labels then we just need to split them apart as I said at the start identify the text and work only on that, but I mean he didn't want that I think I should talk about that again
 
 - [ ] Understand why some images get no prediction and when cropped even slightly they get the exact prediction.
